@@ -1,0 +1,42 @@
+INFO 2026-05-28 22:06:17 rl/actor.py:120 Actor logging initialized, writing to outputs/train/2026-05-28/22-06-17_default/logs/actor_default.log
+INFO 2026-05-28 22:06:17 rl/actor.py:457 [ACTOR] Learner service client created
+INFO 2026-05-28 22:06:17 rl/actor.py:130 [ACTOR] Establishing connection with Learner
+INFO 2026-05-28 22:06:17 rl/actor.py:431 [ACTOR] Send ready message to Learner
+ERROR 2026-05-28 22:06:18 rl/actor.py:435 [ACTOR] Waiting for Learner to be ready... <_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.UNAVAILABLE
+	details = "failed to connect to all addresses; last error: UNKNOWN: ipv4:127.0.0.1:50051: Failed to connect to remote host: connect: Connection refused (61)"
+	debug_error_string = "UNKNOWN:Error received from peer  {grpc_message:"failed to connect to all addresses; last error: UNKNOWN: ipv4:127.0.0.1:50051: Failed to connect to remote host: connect: Connection refused (61)", grpc_status:14}"
+>
+INFO 2026-05-28 22:06:20 rl/actor.py:431 [ACTOR] Send ready message to Learner
+ERROR 2026-05-28 22:06:22 rl/actor.py:435 [ACTOR] Waiting for Learner to be ready... <_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.UNAVAILABLE
+	details = "failed to connect to all addresses; last error: UNKNOWN: ipv4:127.0.0.1:50051: Failed to connect to remote host: connect: Connection refused (61)"
+	debug_error_string = "UNKNOWN:Error received from peer  {grpc_status:14, grpc_message:"failed to connect to all addresses; last error: UNKNOWN: ipv4:127.0.0.1:50051: Failed to connect to remote host: connect: Connection refused (61)"}"
+>
+INFO 2026-05-28 22:06:24 rl/actor.py:431 [ACTOR] Send ready message to Learner
+ERROR 2026-05-28 22:06:26 rl/actor.py:435 [ACTOR] Waiting for Learner to be ready... <_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.UNAVAILABLE
+	details = "failed to connect to all addresses; last error: UNKNOWN: ipv4:127.0.0.1:50051: Failed to connect to remote host: connect: Connection refused (61)"
+	debug_error_string = "UNKNOWN:Error received from peer  {grpc_status:14, grpc_message:"failed to connect to all addresses; last error: UNKNOWN: ipv4:127.0.0.1:50051: Failed to connect to remote host: connect: Connection refused (61)"}"
+>
+INFO 2026-05-28 22:06:28 rl/actor.py:431 [ACTOR] Send ready message to Learner
+ERROR 2026-05-28 22:06:29 rl/actor.py:435 [ACTOR] Waiting for Learner to be ready... <_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.UNAVAILABLE
+	details = "failed to connect to all addresses; last error: UNKNOWN: ipv4:127.0.0.1:50051: Failed to connect to remote host: connect: Connection refused (61)"
+	debug_error_string = "UNKNOWN:Error received from peer  {grpc_message:"failed to connect to all addresses; last error: UNKNOWN: ipv4:127.0.0.1:50051: Failed to connect to remote host: connect: Connection refused (61)", grpc_status:14}"
+>
+INFO 2026-05-28 22:06:31 rl/actor.py:431 [ACTOR] Send ready message to Learner
+ERROR 2026-05-28 22:06:33 rl/actor.py:435 [ACTOR] Waiting for Learner to be ready... <_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.UNAVAILABLE
+	details = "failed to connect to all addresses; last error: UNKNOWN: ipv4:127.0.0.1:50051: Failed to connect to remote host: connect: Connection refused (61)"
+	debug_error_string = "UNKNOWN:Error received from peer  {grpc_status:14, grpc_message:"failed to connect to all addresses; last error: UNKNOWN: ipv4:127.0.0.1:50051: Failed to connect to remote host: connect: Connection refused (61)"}"
+>
+INFO 2026-05-28 22:06:35 rl/actor.py:431 [ACTOR] Send ready message to Learner
+INFO 2026-05-28 22:06:35 l/process.py:61  Shutdown signal 2 received. Cleaning up…
+ERROR 2026-05-28 22:06:36 rl/actor.py:435 [ACTOR] Waiting for Learner to be ready... <_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.UNAVAILABLE
+	details = "failed to connect to all addresses; last error: UNKNOWN: ipv4:127.0.0.1:50051: Failed to connect to remote host: connect: Connection refused (61)"
+	debug_error_string = "UNKNOWN:Error received from peer  {grpc_message:"failed to connect to all addresses; last error: UNKNOWN: ipv4:127.0.0.1:50051: Failed to connect to remote host: connect: Connection refused (61)", grpc_status:14}"
+>
+INFO 2026-05-28 22:06:37 l/process.py:61  Shutdown signal 2 received. Cleaning up…
+INFO 2026-05-28 22:06:37 l/process.py:70 Force shutdown

@@ -1,0 +1,510 @@
+INFO 2026-05-28 22:11:42 /learner.py:149 Learner logging initialized, writing to outputs/train/2026-05-28/22-11-42_default/logs/learner_default.log
+INFO 2026-05-28 22:11:42 /learner.py:150 {'batch_size': 256,
+ 'checkpoint_path': None,
+ 'cudnn_deterministic': False,
+ 'dataset': {'episodes': None,
+             'image_transforms': {'enable': False,
+                                  'max_num_transforms': 3,
+                                  'random_order': False,
+                                  'tfs': {'affine': {'kwargs': {'degrees': [-5.0,
+                                                                            5.0],
+                                                                'translate': [0.05,
+                                                                              0.05]},
+                                                     'type': 'RandomAffine',
+                                                     'weight': 1.0},
+                                          'brightness': {'kwargs': {'brightness': [0.8,
+                                                                                   1.2]},
+                                                         'type': 'ColorJitter',
+                                                         'weight': 1.0},
+                                          'contrast': {'kwargs': {'contrast': [0.8,
+                                                                               1.2]},
+                                                       'type': 'ColorJitter',
+                                                       'weight': 1.0},
+                                          'hue': {'kwargs': {'hue': [-0.05,
+                                                                     0.05]},
+                                                  'type': 'ColorJitter',
+                                                  'weight': 1.0},
+                                          'saturation': {'kwargs': {'saturation': [0.5,
+                                                                                   1.5]},
+                                                         'type': 'ColorJitter',
+                                                         'weight': 1.0},
+                                          'sharpness': {'kwargs': {'sharpness': [0.5,
+                                                                                 1.5]},
+                                                        'type': 'SharpnessJitter',
+                                                        'weight': 1.0}}},
+             'repo_id': 'lilkm/pick_cube_franka_panda_30',
+             'revision': None,
+             'root': None,
+             'streaming': False,
+             'use_imagenet_stats': False,
+             'video_backend': 'torchcodec'},
+ 'env': {'disable_env_checker': True,
+         'features': {'action': {'shape': [3],
+                                 'type': <FeatureType.ACTION: 'ACTION'>},
+                      'observation.images.front': {'shape': [3, 128, 128],
+                                                   'type': <FeatureType.VISUAL: 'VISUAL'>},
+                      'observation.images.wrist': {'shape': [3, 128, 128],
+                                                   'type': <FeatureType.VISUAL: 'VISUAL'>},
+                      'observation.state': {'shape': [18],
+                                            'type': <FeatureType.STATE: 'STATE'>}},
+         'features_map': {'action': 'action',
+                          'observation.images.front': 'observation.images.front',
+                          'observation.images.wrist': 'observation.images.wrist',
+                          'observation.state': 'observation.state'},
+         'fps': 10,
+         'max_parallel_tasks': 1,
+         'name': 'gym_hil',
+         'processor': {'control_mode': 'leader',
+                       'gripper': {'gripper_penalty': -0.02,
+                                   'use_gripper': True},
+                       'image_preprocessing': None,
+                       'inverse_kinematics': None,
+                       'max_gripper_pos': 100.0,
+                       'observation': None,
+                       'reset': {'control_time_s': 15.0,
+                                 'fixed_reset_joint_positions': [0.0,
+                                                                 0.195,
+                                                                 0.0,
+                                                                 -2.43,
+                                                                 0.0,
+                                                                 2.62,
+                                                                 0.785],
+                                 'reset_time_s': 1.0,
+                                 'terminate_on_success': True},
+                       'reward_classifier': None},
+         'robot': None,
+         'task': 'PandaPickCube-v0',
+         'teleop': None,
+         'type': 'gym_manipulator'},
+ 'eval': {'batch_size': 7, 'n_episodes': 50, 'use_async_envs': True},
+ 'eval_freq': 20000,
+ 'job_name': 'default',
+ 'log_freq': 1,
+ 'num_workers': 4,
+ 'optimizer': {'grad_clip_norm': 10.0,
+               'lr': 0.001,
+               'optimizer_groups': {'actor': {'lr': 0.0003},
+                                    'critic': {'lr': 0.0003},
+                                    'temperature': {'lr': 0.0003}},
+               'type': 'multi_adam',
+               'weight_decay': 0.0},
+ 'output_dir': 'outputs/train/2026-05-28/22-11-42_default',
+ 'peft': None,
+ 'policy': {'actor_learner_config': {'learner_host': '127.0.0.1',
+                                     'learner_port': 50051,
+                                     'policy_parameters_push_frequency': 50,
+                                     'queue_get_timeout': 2},
+            'actor_lr': 0.0003,
+            'actor_network_kwargs': {'activate_final': True,
+                                     'hidden_dims': [256, 256]},
+            'async_prefetch': False,
+            'concurrency': {'actor': 'threads', 'learner': 'threads'},
+            'critic_lr': 0.0003,
+            'critic_network_kwargs': {'activate_final': True,
+                                      'final_activation': None,
+                                      'hidden_dims': [256, 256]},
+            'critic_target_update_weight': 0.005,
+            'dataset_stats': {'action': {'max': [1.0, 1.0, 1.0],
+                                         'min': [-1.0, -1.0, -1.0]},
+                              'observation.images.front': {'mean': [0.485,
+                                                                    0.456,
+                                                                    0.406],
+                                                           'std': [0.229,
+                                                                   0.224,
+                                                                   0.225]},
+                              'observation.images.wrist': {'mean': [0.485,
+                                                                    0.456,
+                                                                    0.406],
+                                                           'std': [0.229,
+                                                                   0.224,
+                                                                   0.225]},
+                              'observation.state': {'max': [0.1956124,
+                                                            0.5096723,
+                                                            0.05482981,
+                                                            -2.01792539,
+                                                            0.04425749,
+                                                            2.90565838,
+                                                            1.07170398,
+                                                            100.0,
+                                                            100.0,
+                                                            100.0,
+                                                            100.0,
+                                                            100.0,
+                                                            100.0,
+                                                            100.0,
+                                                            255.0,
+                                                            0.6,
+                                                            0.3,
+                                                            0.5],
+                                                    'min': [-0.18890867,
+                                                            -0.13319267,
+                                                            -0.15566483,
+                                                            -3.04198435,
+                                                            -0.05300621,
+                                                            2.52864378,
+                                                            0.426834,
+                                                            -100.0,
+                                                            -100.0,
+                                                            -100.0,
+                                                            -100.0,
+                                                            -100.0,
+                                                            -100.0,
+                                                            -100.0,
+                                                            0.0,
+                                                            0.2,
+                                                            -0.3,
+                                                            0.0]}},
+            'device': 'cpu',
+            'discount': 0.97,
+            'discrete_critic_network_kwargs': {'activate_final': True,
+                                               'final_activation': None,
+                                               'hidden_dims': [256, 256]},
+            'freeze_vision_encoder': True,
+            'grad_clip_norm': 10.0,
+            'image_embedding_pooling_dim': 8,
+            'image_encoder_hidden_dim': 32,
+            'input_features': {'observation.images.front': {'shape': [3,
+                                                                      128,
+                                                                      128],
+                                                            'type': <FeatureType.VISUAL: 'VISUAL'>},
+                               'observation.images.wrist': {'shape': [3,
+                                                                      128,
+                                                                      128],
+                                                            'type': <FeatureType.VISUAL: 'VISUAL'>},
+                               'observation.state': {'shape': [18],
+                                                     'type': <FeatureType.STATE: 'STATE'>}},
+            'latent_dim': 64,
+            'license': None,
+            'n_obs_steps': 1,
+            'normalization_mapping': {'ACTION': <NormalizationMode.MIN_MAX: 'MIN_MAX'>,
+                                      'ENV': <NormalizationMode.MIN_MAX: 'MIN_MAX'>,
+                                      'STATE': <NormalizationMode.MIN_MAX: 'MIN_MAX'>,
+                                      'VISUAL': <NormalizationMode.MEAN_STD: 'MEAN_STD'>},
+            'num_critics': 2,
+            'num_discrete_actions': 3,
+            'num_subsample_critics': None,
+            'offline_buffer_capacity': 100000,
+            'online_buffer_capacity': 100000,
+            'online_step_before_learning': 100,
+            'online_steps': 1000000,
+            'output_features': {'action': {'shape': [3],
+                                           'type': <FeatureType.ACTION: 'ACTION'>}},
+            'policy_kwargs': {'init_final': 0.05,
+                              'std_max': 5.0,
+                              'std_min': 1e-05,
+                              'use_tanh_squash': True},
+            'policy_update_freq': 1,
+            'pretrained_path': None,
+            'private': None,
+            'push_to_hub': False,
+            'repo_id': None,
+            'shared_encoder': True,
+            'state_encoder_hidden_dim': 256,
+            'storage_device': 'cpu',
+            'tags': None,
+            'target_entropy': None,
+            'temperature_init': 0.01,
+            'temperature_lr': 0.0003,
+            'type': 'sac',
+            'use_amp': False,
+            'use_backup_entropy': True,
+            'use_peft': False,
+            'use_torch_compile': True,
+            'utd_ratio': 2,
+            'vision_encoder_name': 'lerobot/resnet10'},
+ 'rabc_epsilon': 1e-06,
+ 'rabc_head_mode': 'sparse',
+ 'rabc_kappa': 0.01,
+ 'rabc_progress_path': None,
+ 'rename_map': {},
+ 'resume': False,
+ 'save_checkpoint': True,
+ 'save_freq': 2000000,
+ 'scheduler': None,
+ 'seed': 1000,
+ 'steps': 100000,
+ 'tolerance_s': 0.0001,
+ 'use_policy_training_preset': True,
+ 'use_rabc': False,
+ 'wandb': {'add_tags': True,
+           'disable_artifact': True,
+           'enable': False,
+           'entity': None,
+           'mode': None,
+           'notes': None,
+           'project': 'franka_sim',
+           'run_id': None}}
+INFO 2026-05-28 22:11:42 /learner.py:159 [1m[33mLogs will be saved locally.[0m
+WARNING 2026-05-28 22:11:42 ice_utils.py:54 Using CPU, this will be slow.
+INFO 2026-05-28 22:11:42 /learner.py:309 Initializing policy
+WARNING 2026-05-28 22:11:42 /factory.py:498 You are instantiating a policy from scratch and its features are parsed from an environment rather than a dataset. Normalization modules inside the policy will have infinite values by default without stats from a dataset.
+INFO 2026-05-28 22:11:42 /learner.py:668 [LEARNER] gRPC server started
+DEBUG 2026-05-28 22:11:42 re/_trace.py:47 connect_tcp.started host='huggingface.co' port=443 local_address=None timeout=10 socket_options=None
+DEBUG 2026-05-28 22:11:42 re/_trace.py:47 connect_tcp.complete return_value=<httpcore._backends.sync.SyncStream object at 0x156768530>
+DEBUG 2026-05-28 22:11:42 re/_trace.py:47 start_tls.started ssl_context=<ssl.SSLContext object at 0x1567df550> server_hostname='huggingface.co' timeout=10
+DEBUG 2026-05-28 22:11:42 re/_trace.py:47 start_tls.complete return_value=<httpcore._backends.sync.SyncStream object at 0x156768440>
+DEBUG 2026-05-28 22:11:42 re/_trace.py:47 send_request_headers.started request=<Request [b'HEAD']>
+DEBUG 2026-05-28 22:11:42 re/_trace.py:47 send_request_headers.complete
+DEBUG 2026-05-28 22:11:42 re/_trace.py:47 send_request_body.started request=<Request [b'HEAD']>
+DEBUG 2026-05-28 22:11:42 re/_trace.py:47 send_request_body.complete
+DEBUG 2026-05-28 22:11:42 re/_trace.py:47 receive_response_headers.started request=<Request [b'HEAD']>
+DEBUG 2026-05-28 22:11:43 re/_trace.py:47 receive_response_headers.complete return_value=(b'HTTP/1.1', 307, b'Temporary Redirect', [(b'Content-Type', b'text/plain; charset=utf-8'), (b'Content-Length', b'236'), (b'Connection', b'keep-alive'), (b'Date', b'Fri, 29 May 2026 03:11:43 GMT'), (b'Location', b'/api/resolve-cache/models/lerobot/resnet10/60e4365989619db6365ba92b1169d5dcc143d165/config.json?%2Flerobot%2Fresnet10%2Fresolve%2Fmain%2Fconfig.json=&etag=%22661ebcf4aec142f47be95003ad8784697d8d0af2%22'), (b'X-Powered-By', b'huggingface-moon'), (b'X-Request-Id', b'Root=1-6a1903ef-2aa29a0261d90f82772a5993;5d78ddf4-f23f-40c2-af9d-29e61f5d12ab'), (b'RateLimit', b'"resolvers";r=2999;t=225'), (b'RateLimit-Policy', b'"fixed window";"resolvers";q=3000;w=300'), (b'cross-origin-opener-policy', b'same-origin'), (b'Referrer-Policy', b'strict-origin-when-cross-origin'), (b'Access-Control-Max-Age', b'86400'), (b'Access-Control-Allow-Origin', b'https://huggingface.co'), (b'Vary', b'Origin, Accept'), (b'Access-Control-Expose-Headers', b'X-Repo-Commit,X-Request-Id,X-Error-Code,X-Error-Message,X-Total-Count,ETag,Link,Accept-Ranges,Content-Range,X-Linked-Size,X-Linked-ETag,X-Xet-Hash'), (b'X-Repo-Commit', b'60e4365989619db6365ba92b1169d5dcc143d165'), (b'Accept-Ranges', b'bytes'), (b'X-HF-Warning', b'unauthenticated; Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.'), (b'X-Hub-Cache', b'MISS'), (b'Content-Disposition', b'inline; filename*=UTF-8\'\'config.json; filename="config.json";'), (b'Content-Security-Policy', b"default-src 'none'; sandbox"), (b'X-Linked-ETag', b'"661ebcf4aec142f47be95003ad8784697d8d0af2"'), (b'X-Cache', b'Miss from cloudfront'), (b'Via', b'1.1 8217c41da9d2395cb259da1f3fbc7cda.cloudfront.net (CloudFront)'), (b'X-Amz-Cf-Pop', b'DFW59-P5'), (b'X-Amz-Cf-Id', b'7YmOHyMzJ2QKuh6tBiZfO7eAotYEYR2qEljyIT3RK2hcj_VbF4NKqw==')])
+DEBUG 2026-05-28 22:11:43 re/_trace.py:47 receive_response_body.started request=<Request [b'HEAD']>
+DEBUG 2026-05-28 22:11:43 re/_trace.py:47 receive_response_body.complete
+DEBUG 2026-05-28 22:11:43 re/_trace.py:47 response_closed.started
+DEBUG 2026-05-28 22:11:43 re/_trace.py:47 response_closed.complete
+WARNING 2026-05-28 22:11:43 ls/_http.py:904 Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+DEBUG 2026-05-28 22:11:43 re/_trace.py:47 send_request_headers.started request=<Request [b'HEAD']>
+DEBUG 2026-05-28 22:11:43 re/_trace.py:47 send_request_headers.complete
+DEBUG 2026-05-28 22:11:43 re/_trace.py:47 send_request_body.started request=<Request [b'HEAD']>
+DEBUG 2026-05-28 22:11:43 re/_trace.py:47 send_request_body.complete
+DEBUG 2026-05-28 22:11:43 re/_trace.py:47 receive_response_headers.started request=<Request [b'HEAD']>
+DEBUG 2026-05-28 22:11:43 re/_trace.py:47 receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Content-Type', b'text/plain; charset=utf-8'), (b'Content-Length', b'443'), (b'Connection', b'keep-alive'), (b'Date', b'Mon, 11 May 2026 10:35:04 GMT'), (b'ETag', b'"661ebcf4aec142f47be95003ad8784697d8d0af2"'), (b'X-Powered-By', b'huggingface-moon'), (b'X-Request-Id', b'Root=1-6a01b0d8-64f607bd6b98825c60c53bbe;c37fa827-1c81-4726-b652-f81e3c98ed09'), (b'RateLimit', b'"resolvers";r=2999;t=80'), (b'RateLimit-Policy', b'"fixed window";"resolvers";q=3000;w=300'), (b'cross-origin-opener-policy', b'same-origin'), (b'Referrer-Policy', b'strict-origin-when-cross-origin'), (b'Access-Control-Max-Age', b'86400'), (b'Access-Control-Allow-Origin', b'https://huggingface.co'), (b'Access-Control-Expose-Headers', b'X-Repo-Commit,X-Request-Id,X-Error-Code,X-Error-Message,X-Total-Count,ETag,Link,Accept-Ranges,Content-Range,X-Linked-Size,X-Linked-ETag,X-Xet-Hash'), (b'X-Repo-Commit', b'60e4365989619db6365ba92b1169d5dcc143d165'), (b'Accept-Ranges', b'bytes'), (b'Content-Disposition', b'inline; filename*=UTF-8\'\'config.json; filename="config.json";'), (b'Content-Security-Policy', b"default-src 'none'; sandbox"), (b'Vary', b'Origin'), (b'X-Cache', b'Hit from cloudfront'), (b'Via', b'1.1 8217c41da9d2395cb259da1f3fbc7cda.cloudfront.net (CloudFront)'), (b'X-Amz-Cf-Pop', b'DFW59-P5'), (b'X-Amz-Cf-Id', b'hzGdfsNRNS5wDaJRI0y70U1B2IIzhFr48uWIjiqvVEksAp7FkKmd4g=='), (b'Age', b'1528599')])
+DEBUG 2026-05-28 22:11:43 re/_trace.py:47 receive_response_body.started request=<Request [b'HEAD']>
+DEBUG 2026-05-28 22:11:43 re/_trace.py:47 receive_response_body.complete
+DEBUG 2026-05-28 22:11:43 re/_trace.py:47 response_closed.started
+DEBUG 2026-05-28 22:11:43 re/_trace.py:47 response_closed.complete
+DEBUG 2026-05-28 22:11:43 ock/_api.py:501 Attempting to acquire lock 5755155040 on /Users/jordancarter/.cache/huggingface/hub/.locks/models--lerobot--resnet10/661ebcf4aec142f47be95003ad8784697d8d0af2.lock
+DEBUG 2026-05-28 22:11:43 ock/_api.py:504 Lock 5755155040 acquired on /Users/jordancarter/.cache/huggingface/hub/.locks/models--lerobot--resnet10/661ebcf4aec142f47be95003ad8784697d8d0af2.lock
+DEBUG 2026-05-28 22:11:43 re/_trace.py:47 send_request_headers.started request=<Request [b'GET']>
+DEBUG 2026-05-28 22:11:43 re/_trace.py:47 send_request_headers.complete
+DEBUG 2026-05-28 22:11:43 re/_trace.py:47 send_request_body.started request=<Request [b'GET']>
+DEBUG 2026-05-28 22:11:43 re/_trace.py:47 send_request_body.complete
+DEBUG 2026-05-28 22:11:43 re/_trace.py:47 receive_response_headers.started request=<Request [b'GET']>
+DEBUG 2026-05-28 22:11:43 re/_trace.py:47 receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Content-Type', b'text/plain; charset=utf-8'), (b'Content-Length', b'443'), (b'Connection', b'keep-alive'), (b'Date', b'Tue, 12 May 2026 14:18:01 GMT'), (b'ETag', b'"661ebcf4aec142f47be95003ad8784697d8d0af2"'), (b'X-Powered-By', b'huggingface-moon'), (b'X-Request-Id', b'Root=1-6a033699-61ef467b270e1b707ed5a997;f2e70432-d92f-4abc-ac67-8c2d6b6b4a7f'), (b'RateLimit', b'"resolvers";r=2925;t=194'), (b'RateLimit-Policy', b'"fixed window";"resolvers";q=3000;w=300'), (b'cross-origin-opener-policy', b'same-origin'), (b'Referrer-Policy', b'strict-origin-when-cross-origin'), (b'Access-Control-Max-Age', b'86400'), (b'Access-Control-Allow-Origin', b'https://huggingface.co'), (b'Access-Control-Expose-Headers', b'X-Repo-Commit,X-Request-Id,X-Error-Code,X-Error-Message,X-Total-Count,ETag,Link,Accept-Ranges,Content-Range,X-Linked-Size,X-Linked-ETag,X-Xet-Hash'), (b'X-Repo-Commit', b'60e4365989619db6365ba92b1169d5dcc143d165'), (b'Accept-Ranges', b'bytes'), (b'Content-Disposition', b'inline; filename*=UTF-8\'\'config.json; filename="config.json";'), (b'Content-Security-Policy', b"default-src 'none'; sandbox"), (b'Vary', b'Origin'), (b'X-Cache', b'Hit from cloudfront'), (b'Via', b'1.1 8217c41da9d2395cb259da1f3fbc7cda.cloudfront.net (CloudFront)'), (b'X-Amz-Cf-Pop', b'DFW59-P5'), (b'X-Amz-Cf-Id', b'7_y-JUwoZen-Dq21CjrbNpG1tVbjxjb322CiXdEm3Ulk0QZa1dYKow=='), (b'Age', b'1428822')])
+DEBUG 2026-05-28 22:11:43 re/_trace.py:47 receive_response_body.started request=<Request [b'GET']>
+DEBUG 2026-05-28 22:11:43 re/_trace.py:47 receive_response_body.complete
+DEBUG 2026-05-28 22:11:43 re/_trace.py:47 response_closed.started
+DEBUG 2026-05-28 22:11:43 re/_trace.py:47 response_closed.complete
+DEBUG 2026-05-28 22:11:43 ock/_api.py:541 Attempting to release lock 5755155040 on /Users/jordancarter/.cache/huggingface/hub/.locks/models--lerobot--resnet10/661ebcf4aec142f47be95003ad8784697d8d0af2.lock
+DEBUG 2026-05-28 22:11:43 ock/_api.py:545 Lock 5755155040 released on /Users/jordancarter/.cache/huggingface/hub/.locks/models--lerobot--resnet10/661ebcf4aec142f47be95003ad8784697d8d0af2.lock
+DEBUG 2026-05-28 22:11:43 re/_trace.py:47 send_request_headers.started request=<Request [b'HEAD']>
+DEBUG 2026-05-28 22:11:43 re/_trace.py:47 send_request_headers.complete
+DEBUG 2026-05-28 22:11:43 re/_trace.py:47 send_request_body.started request=<Request [b'HEAD']>
+DEBUG 2026-05-28 22:11:43 re/_trace.py:47 send_request_body.complete
+DEBUG 2026-05-28 22:11:43 re/_trace.py:47 receive_response_headers.started request=<Request [b'HEAD']>
+DEBUG 2026-05-28 22:11:43 re/_trace.py:47 receive_response_headers.complete return_value=(b'HTTP/1.1', 307, b'Temporary Redirect', [(b'Content-Type', b'text/plain; charset=utf-8'), (b'Content-Length', b'260'), (b'Connection', b'keep-alive'), (b'Date', b'Fri, 29 May 2026 03:11:43 GMT'), (b'Location', b'/api/resolve-cache/models/lerobot/resnet10/60e4365989619db6365ba92b1169d5dcc143d165/configuration_resnet.py?%2Flerobot%2Fresnet10%2Fresolve%2Fmain%2Fconfiguration_resnet.py=&etag=%224052d0071a8ee34021221da84f42607fb28dbbfb%22'), (b'X-Powered-By', b'huggingface-moon'), (b'X-Request-Id', b'Root=1-6a1903ef-1d67a4cc54c2fc911cebffd2;ba7f5ce7-bcec-4134-a5cd-1c411163cd49'), (b'RateLimit', b'"resolvers";r=2998;t=225'), (b'RateLimit-Policy', b'"fixed window";"resolvers";q=3000;w=300'), (b'cross-origin-opener-policy', b'same-origin'), (b'Referrer-Policy', b'strict-origin-when-cross-origin'), (b'Access-Control-Max-Age', b'86400'), (b'Access-Control-Allow-Origin', b'https://huggingface.co'), (b'Vary', b'Origin, Accept'), (b'Access-Control-Expose-Headers', b'X-Repo-Commit,X-Request-Id,X-Error-Code,X-Error-Message,X-Total-Count,ETag,Link,Accept-Ranges,Content-Range,X-Linked-Size,X-Linked-ETag,X-Xet-Hash'), (b'X-Repo-Commit', b'60e4365989619db6365ba92b1169d5dcc143d165'), (b'Accept-Ranges', b'bytes'), (b'X-Hub-Cache', b'MISS'), (b'Content-Disposition', b'inline; filename*=UTF-8\'\'configuration_resnet.py; filename="configuration_resnet.py";'), (b'Content-Security-Policy', b"default-src 'none'; sandbox"), (b'X-Linked-ETag', b'"4052d0071a8ee34021221da84f42607fb28dbbfb"'), (b'X-Cache', b'Miss from cloudfront'), (b'Via', b'1.1 8217c41da9d2395cb259da1f3fbc7cda.cloudfront.net (CloudFront)'), (b'X-Amz-Cf-Pop', b'DFW59-P5'), (b'X-Amz-Cf-Id', b'pK4o9umurzBLJL8ORK9GpRIgksdBFXISEkxH6w3LRPoB-xPfkXj35Q==')])
+DEBUG 2026-05-28 22:11:43 re/_trace.py:47 receive_response_body.started request=<Request [b'HEAD']>
+DEBUG 2026-05-28 22:11:43 re/_trace.py:47 receive_response_body.complete
+DEBUG 2026-05-28 22:11:43 re/_trace.py:47 response_closed.started
+DEBUG 2026-05-28 22:11:43 re/_trace.py:47 response_closed.complete
+DEBUG 2026-05-28 22:11:43 re/_trace.py:47 send_request_headers.started request=<Request [b'HEAD']>
+DEBUG 2026-05-28 22:11:43 re/_trace.py:47 send_request_headers.complete
+DEBUG 2026-05-28 22:11:43 re/_trace.py:47 send_request_body.started request=<Request [b'HEAD']>
+DEBUG 2026-05-28 22:11:43 re/_trace.py:47 send_request_body.complete
+DEBUG 2026-05-28 22:11:43 re/_trace.py:47 receive_response_headers.started request=<Request [b'HEAD']>
+DEBUG 2026-05-28 22:11:43 re/_trace.py:47 receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Content-Type', b'text/plain; charset=utf-8'), (b'Content-Length', b'3390'), (b'Connection', b'keep-alive'), (b'Date', b'Mon, 11 May 2026 10:35:09 GMT'), (b'ETag', b'"4052d0071a8ee34021221da84f42607fb28dbbfb"'), (b'X-Powered-By', b'huggingface-moon'), (b'X-Request-Id', b'Root=1-6a01b0dc-0311473b1d241324548083ca;c414bbb9-cabc-435d-8843-7cc3cfa49acd'), (b'RateLimit', b'"resolvers";r=2998;t=148'), (b'RateLimit-Policy', b'"fixed window";"resolvers";q=3000;w=300'), (b'cross-origin-opener-policy', b'same-origin'), (b'Referrer-Policy', b'strict-origin-when-cross-origin'), (b'Access-Control-Max-Age', b'86400'), (b'Access-Control-Allow-Origin', b'https://huggingface.co'), (b'Access-Control-Expose-Headers', b'X-Repo-Commit,X-Request-Id,X-Error-Code,X-Error-Message,X-Total-Count,ETag,Link,Accept-Ranges,Content-Range,X-Linked-Size,X-Linked-ETag,X-Xet-Hash'), (b'X-Repo-Commit', b'60e4365989619db6365ba92b1169d5dcc143d165'), (b'Accept-Ranges', b'bytes'), (b'Content-Disposition', b'inline; filename*=UTF-8\'\'configuration_resnet.py; filename="configuration_resnet.py";'), (b'Content-Security-Policy', b"default-src 'none'; sandbox"), (b'Vary', b'Origin'), (b'X-Cache', b'Hit from cloudfront'), (b'Via', b'1.1 8217c41da9d2395cb259da1f3fbc7cda.cloudfront.net (CloudFront)'), (b'X-Amz-Cf-Pop', b'DFW59-P5'), (b'X-Amz-Cf-Id', b'8zEU9R7614_yP-FGq99uJJ0K50pYv9SevjUifhS5Mt-ECmowWFVauA=='), (b'Age', b'1528594')])
+DEBUG 2026-05-28 22:11:43 re/_trace.py:47 receive_response_body.started request=<Request [b'HEAD']>
+DEBUG 2026-05-28 22:11:43 re/_trace.py:47 receive_response_body.complete
+DEBUG 2026-05-28 22:11:43 re/_trace.py:47 response_closed.started
+DEBUG 2026-05-28 22:11:43 re/_trace.py:47 response_closed.complete
+DEBUG 2026-05-28 22:11:43 ock/_api.py:501 Attempting to acquire lock 5745586976 on /Users/jordancarter/.cache/huggingface/hub/.locks/models--lerobot--resnet10/4052d0071a8ee34021221da84f42607fb28dbbfb.lock
+DEBUG 2026-05-28 22:11:43 ock/_api.py:504 Lock 5745586976 acquired on /Users/jordancarter/.cache/huggingface/hub/.locks/models--lerobot--resnet10/4052d0071a8ee34021221da84f42607fb28dbbfb.lock
+DEBUG 2026-05-28 22:11:43 re/_trace.py:47 send_request_headers.started request=<Request [b'GET']>
+DEBUG 2026-05-28 22:11:43 re/_trace.py:47 send_request_headers.complete
+DEBUG 2026-05-28 22:11:43 re/_trace.py:47 send_request_body.started request=<Request [b'GET']>
+DEBUG 2026-05-28 22:11:43 re/_trace.py:47 send_request_body.complete
+DEBUG 2026-05-28 22:11:43 re/_trace.py:47 receive_response_headers.started request=<Request [b'GET']>
+DEBUG 2026-05-28 22:11:43 re/_trace.py:47 receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Content-Type', b'text/plain; charset=utf-8'), (b'Transfer-Encoding', b'chunked'), (b'Connection', b'keep-alive'), (b'Date', b'Tue, 12 May 2026 14:18:01 GMT'), (b'Content-Encoding', b'gzip'), (b'ETag', b'W/"4052d0071a8ee34021221da84f42607fb28dbbfb"'), (b'X-Powered-By', b'huggingface-moon'), (b'X-Request-Id', b'Root=1-6a033699-0720a6d852916bb0301b828d;0bc5626f-4e64-4b79-ac6d-8710fb08bb3f'), (b'RateLimit', b'"resolvers";r=2922;t=194'), (b'RateLimit-Policy', b'"fixed window";"resolvers";q=3000;w=300'), (b'cross-origin-opener-policy', b'same-origin'), (b'Referrer-Policy', b'strict-origin-when-cross-origin'), (b'Access-Control-Max-Age', b'86400'), (b'Access-Control-Allow-Origin', b'https://huggingface.co'), (b'Access-Control-Expose-Headers', b'X-Repo-Commit,X-Request-Id,X-Error-Code,X-Error-Message,X-Total-Count,ETag,Link,Accept-Ranges,Content-Range,X-Linked-Size,X-Linked-ETag,X-Xet-Hash'), (b'X-Repo-Commit', b'60e4365989619db6365ba92b1169d5dcc143d165'), (b'Content-Security-Policy', b"default-src 'none'; sandbox"), (b'Content-Disposition', b'inline; filename*=UTF-8\'\'configuration_resnet.py; filename="configuration_resnet.py";'), (b'Vary', b'Origin,Accept-Encoding'), (b'X-Cache', b'Hit from cloudfront'), (b'Via', b'1.1 8217c41da9d2395cb259da1f3fbc7cda.cloudfront.net (CloudFront)'), (b'X-Amz-Cf-Pop', b'DFW59-P5'), (b'X-Amz-Cf-Id', b't6FWsU6BgAuWyI5huVtoti7ns3ehYMzx4ftZk1NZiuEGHl-XQRJZ7Q=='), (b'Age', b'1428822')])
+DEBUG 2026-05-28 22:11:43 re/_trace.py:47 receive_response_body.started request=<Request [b'GET']>
+DEBUG 2026-05-28 22:11:43 re/_trace.py:47 receive_response_body.complete
+DEBUG 2026-05-28 22:11:43 re/_trace.py:47 response_closed.started
+DEBUG 2026-05-28 22:11:43 re/_trace.py:47 response_closed.complete
+DEBUG 2026-05-28 22:11:43 ock/_api.py:541 Attempting to release lock 5745586976 on /Users/jordancarter/.cache/huggingface/hub/.locks/models--lerobot--resnet10/4052d0071a8ee34021221da84f42607fb28dbbfb.lock
+DEBUG 2026-05-28 22:11:43 ock/_api.py:545 Lock 5745586976 released on /Users/jordancarter/.cache/huggingface/hub/.locks/models--lerobot--resnet10/4052d0071a8ee34021221da84f42607fb28dbbfb.lock
+DEBUG 2026-05-28 22:11:43 re/_trace.py:47 send_request_headers.started request=<Request [b'HEAD']>
+DEBUG 2026-05-28 22:11:43 re/_trace.py:47 send_request_headers.complete
+DEBUG 2026-05-28 22:11:43 re/_trace.py:47 send_request_body.started request=<Request [b'HEAD']>
+DEBUG 2026-05-28 22:11:43 re/_trace.py:47 send_request_body.complete
+DEBUG 2026-05-28 22:11:43 re/_trace.py:47 receive_response_headers.started request=<Request [b'HEAD']>
+DEBUG 2026-05-28 22:11:43 re/_trace.py:47 receive_response_headers.complete return_value=(b'HTTP/1.1', 307, b'Temporary Redirect', [(b'Content-Type', b'text/plain; charset=utf-8'), (b'Content-Length', b'250'), (b'Connection', b'keep-alive'), (b'Date', b'Fri, 29 May 2026 03:11:43 GMT'), (b'Location', b'/api/resolve-cache/models/lerobot/resnet10/60e4365989619db6365ba92b1169d5dcc143d165/modeling_resnet.py?%2Flerobot%2Fresnet10%2Fresolve%2Fmain%2Fmodeling_resnet.py=&etag=%221d1592a7790b6637fd430db5d5c78ade7849e10b%22'), (b'X-Powered-By', b'huggingface-moon'), (b'X-Request-Id', b'Root=1-6a1903ef-6b896382562d2076434adddd;3d944986-0fb4-4e15-a9df-25d475ff2506'), (b'RateLimit', b'"resolvers";r=2997;t=225'), (b'RateLimit-Policy', b'"fixed window";"resolvers";q=3000;w=300'), (b'cross-origin-opener-policy', b'same-origin'), (b'Referrer-Policy', b'strict-origin-when-cross-origin'), (b'Access-Control-Max-Age', b'86400'), (b'Access-Control-Allow-Origin', b'https://huggingface.co'), (b'Vary', b'Origin, Accept'), (b'Access-Control-Expose-Headers', b'X-Repo-Commit,X-Request-Id,X-Error-Code,X-Error-Message,X-Total-Count,ETag,Link,Accept-Ranges,Content-Range,X-Linked-Size,X-Linked-ETag,X-Xet-Hash'), (b'X-Repo-Commit', b'60e4365989619db6365ba92b1169d5dcc143d165'), (b'Accept-Ranges', b'bytes'), (b'X-HF-Warning', b'unauthenticated; Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.'), (b'X-Hub-Cache', b'MISS'), (b'Content-Disposition', b'inline; filename*=UTF-8\'\'modeling_resnet.py; filename="modeling_resnet.py";'), (b'Content-Security-Policy', b"default-src 'none'; sandbox"), (b'X-Linked-ETag', b'"1d1592a7790b6637fd430db5d5c78ade7849e10b"'), (b'X-Cache', b'Miss from cloudfront'), (b'Via', b'1.1 8217c41da9d2395cb259da1f3fbc7cda.cloudfront.net (CloudFront)'), (b'X-Amz-Cf-Pop', b'DFW59-P5'), (b'X-Amz-Cf-Id', b'aP_m1xZvf7SZKqFIYqMK9NGTJbIjQPtrtkNDfv-paSKuW9Sgo6eUNw==')])
+DEBUG 2026-05-28 22:11:43 re/_trace.py:47 receive_response_body.started request=<Request [b'HEAD']>
+DEBUG 2026-05-28 22:11:43 re/_trace.py:47 receive_response_body.complete
+DEBUG 2026-05-28 22:11:43 re/_trace.py:47 response_closed.started
+DEBUG 2026-05-28 22:11:43 re/_trace.py:47 response_closed.complete
+DEBUG 2026-05-28 22:11:43 re/_trace.py:47 send_request_headers.started request=<Request [b'HEAD']>
+DEBUG 2026-05-28 22:11:43 re/_trace.py:47 send_request_headers.complete
+DEBUG 2026-05-28 22:11:43 re/_trace.py:47 send_request_body.started request=<Request [b'HEAD']>
+DEBUG 2026-05-28 22:11:43 re/_trace.py:47 send_request_body.complete
+DEBUG 2026-05-28 22:11:43 re/_trace.py:47 receive_response_headers.started request=<Request [b'HEAD']>
+DEBUG 2026-05-28 22:11:43 re/_trace.py:47 receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Content-Type', b'text/plain; charset=utf-8'), (b'Content-Length', b'9888'), (b'Connection', b'keep-alive'), (b'Date', b'Mon, 11 May 2026 10:35:11 GMT'), (b'ETag', b'"1d1592a7790b6637fd430db5d5c78ade7849e10b"'), (b'X-Powered-By', b'huggingface-moon'), (b'X-Request-Id', b'Root=1-6a01b0df-42079a94698d18b4477e2629;501de55a-5933-46a0-8e15-388070d4f141'), (b'RateLimit', b'"resolvers";r=2999;t=289'), (b'RateLimit-Policy', b'"fixed window";"resolvers";q=3000;w=300'), (b'cross-origin-opener-policy', b'same-origin'), (b'Referrer-Policy', b'strict-origin-when-cross-origin'), (b'Access-Control-Max-Age', b'86400'), (b'Access-Control-Allow-Origin', b'https://huggingface.co'), (b'Access-Control-Expose-Headers', b'X-Repo-Commit,X-Request-Id,X-Error-Code,X-Error-Message,X-Total-Count,ETag,Link,Accept-Ranges,Content-Range,X-Linked-Size,X-Linked-ETag,X-Xet-Hash'), (b'X-Repo-Commit', b'60e4365989619db6365ba92b1169d5dcc143d165'), (b'Accept-Ranges', b'bytes'), (b'Content-Disposition', b'inline; filename*=UTF-8\'\'modeling_resnet.py; filename="modeling_resnet.py";'), (b'Content-Security-Policy', b"default-src 'none'; sandbox"), (b'Vary', b'Origin'), (b'X-Cache', b'Hit from cloudfront'), (b'Via', b'1.1 8217c41da9d2395cb259da1f3fbc7cda.cloudfront.net (CloudFront)'), (b'X-Amz-Cf-Pop', b'DFW59-P5'), (b'X-Amz-Cf-Id', b'vPECQs0HWYUXAUOjTEh7CXhhxdWFqV16cPYr6KU5FK2Pz0gyV-CfeA=='), (b'Age', b'1528592')])
+DEBUG 2026-05-28 22:11:43 re/_trace.py:47 receive_response_body.started request=<Request [b'HEAD']>
+DEBUG 2026-05-28 22:11:43 re/_trace.py:47 receive_response_body.complete
+DEBUG 2026-05-28 22:11:43 re/_trace.py:47 response_closed.started
+DEBUG 2026-05-28 22:11:43 re/_trace.py:47 response_closed.complete
+DEBUG 2026-05-28 22:11:43 ock/_api.py:501 Attempting to acquire lock 5745213168 on /Users/jordancarter/.cache/huggingface/hub/.locks/models--lerobot--resnet10/1d1592a7790b6637fd430db5d5c78ade7849e10b.lock
+DEBUG 2026-05-28 22:11:43 ock/_api.py:504 Lock 5745213168 acquired on /Users/jordancarter/.cache/huggingface/hub/.locks/models--lerobot--resnet10/1d1592a7790b6637fd430db5d5c78ade7849e10b.lock
+DEBUG 2026-05-28 22:11:43 re/_trace.py:47 send_request_headers.started request=<Request [b'GET']>
+DEBUG 2026-05-28 22:11:43 re/_trace.py:47 send_request_headers.complete
+DEBUG 2026-05-28 22:11:43 re/_trace.py:47 send_request_body.started request=<Request [b'GET']>
+DEBUG 2026-05-28 22:11:43 re/_trace.py:47 send_request_body.complete
+DEBUG 2026-05-28 22:11:43 re/_trace.py:47 receive_response_headers.started request=<Request [b'GET']>
+DEBUG 2026-05-28 22:11:43 re/_trace.py:47 receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Content-Type', b'text/plain; charset=utf-8'), (b'Transfer-Encoding', b'chunked'), (b'Connection', b'keep-alive'), (b'Date', b'Tue, 12 May 2026 14:18:01 GMT'), (b'Content-Encoding', b'gzip'), (b'ETag', b'W/"1d1592a7790b6637fd430db5d5c78ade7849e10b"'), (b'X-Powered-By', b'huggingface-moon'), (b'X-Request-Id', b'Root=1-6a033699-2c83e7451b2c306769f5f376;edbeb4de-a31b-4f75-91b6-ecd58f17cc94'), (b'RateLimit', b'"resolvers";r=2920;t=194'), (b'RateLimit-Policy', b'"fixed window";"resolvers";q=3000;w=300'), (b'cross-origin-opener-policy', b'same-origin'), (b'Referrer-Policy', b'strict-origin-when-cross-origin'), (b'Access-Control-Max-Age', b'86400'), (b'Access-Control-Allow-Origin', b'https://huggingface.co'), (b'Access-Control-Expose-Headers', b'X-Repo-Commit,X-Request-Id,X-Error-Code,X-Error-Message,X-Total-Count,ETag,Link,Accept-Ranges,Content-Range,X-Linked-Size,X-Linked-ETag,X-Xet-Hash'), (b'X-Repo-Commit', b'60e4365989619db6365ba92b1169d5dcc143d165'), (b'Content-Security-Policy', b"default-src 'none'; sandbox"), (b'Content-Disposition', b'inline; filename*=UTF-8\'\'modeling_resnet.py; filename="modeling_resnet.py";'), (b'Vary', b'Origin,Accept-Encoding'), (b'X-Cache', b'Hit from cloudfront'), (b'Via', b'1.1 8217c41da9d2395cb259da1f3fbc7cda.cloudfront.net (CloudFront)'), (b'X-Amz-Cf-Pop', b'DFW59-P5'), (b'X-Amz-Cf-Id', b'C3WR-4cI8qZ1V7GPtYr-vmK167nkSlX3KWi8nLtx6AByZEKLxwfTEg=='), (b'Age', b'1428822')])
+DEBUG 2026-05-28 22:11:43 re/_trace.py:47 receive_response_body.started request=<Request [b'GET']>
+DEBUG 2026-05-28 22:11:43 re/_trace.py:47 receive_response_body.complete
+DEBUG 2026-05-28 22:11:43 re/_trace.py:47 response_closed.started
+DEBUG 2026-05-28 22:11:43 re/_trace.py:47 response_closed.complete
+DEBUG 2026-05-28 22:11:43 ock/_api.py:541 Attempting to release lock 5745213168 on /Users/jordancarter/.cache/huggingface/hub/.locks/models--lerobot--resnet10/1d1592a7790b6637fd430db5d5c78ade7849e10b.lock
+DEBUG 2026-05-28 22:11:43 ock/_api.py:545 Lock 5745213168 released on /Users/jordancarter/.cache/huggingface/hub/.locks/models--lerobot--resnet10/1d1592a7790b6637fd430db5d5c78ade7849e10b.lock
+DEBUG 2026-05-28 22:11:43 re/_trace.py:47 send_request_headers.started request=<Request [b'HEAD']>
+DEBUG 2026-05-28 22:11:43 re/_trace.py:47 send_request_headers.complete
+DEBUG 2026-05-28 22:11:43 re/_trace.py:47 send_request_body.started request=<Request [b'HEAD']>
+DEBUG 2026-05-28 22:11:43 re/_trace.py:47 send_request_body.complete
+DEBUG 2026-05-28 22:11:43 re/_trace.py:47 receive_response_headers.started request=<Request [b'HEAD']>
+DEBUG 2026-05-28 22:11:43 re/_trace.py:47 receive_response_headers.complete return_value=(b'HTTP/1.1', 302, b'Found', [(b'Content-Type', b'text/plain; charset=utf-8'), (b'Content-Length', b'1349'), (b'Connection', b'keep-alive'), (b'Date', b'Fri, 29 May 2026 03:11:43 GMT'), (b'Location', b'https://cas-bridge.xethub.hf.co/xet-bridge-us/69e5ebfedbf054d2b1928e2f/14d6f82ae8c3d7079d999dda8bccf13571711b41fa1c4d267c9d8a60374b4e2f?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=cas%2F20260529%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20260529T031143Z&X-Amz-Expires=3600&X-Amz-Signature=814198768a62c2b1e031c1f48b0fcf24e4765396d56ff9d2650071b8e7e73b00&X-Amz-SignedHeaders=host&X-Xet-Cas-Uid=public&response-content-disposition=inline%3B+filename*%3DUTF-8%27%27model.safetensors%3B+filename%3D%22model.safetensors%22%3B&x-amz-checksum-mode=ENABLED&x-id=GetObject&Expires=1780027903&Policy=eyJTdGF0ZW1lbnQiOlt7IkNvbmRpdGlvbiI6eyJEYXRlTGVzc1RoYW4iOnsiQVdTOkVwb2NoVGltZSI6MTc4MDAyNzkwM319LCJSZXNvdXJjZSI6Imh0dHBzOi8vY2FzLWJyaWRnZS54ZXRodWIuaGYuY28veGV0LWJyaWRnZS11cy82OWU1ZWJmZWRiZjA1NGQyYjE5MjhlMmYvMTRkNmY4MmFlOGMzZDcwNzlkOTk5ZGRhOGJjY2YxMzU3MTcxMWI0MWZhMWM0ZDI2N2M5ZDhhNjAzNzRiNGUyZioifV19&Signature=m3b5flVgYLIXYeBCyP-9Gi8sQVxzfjF4OARiK5Xe-%7Ew-hlvfme6LFSb6no4e%7EzX6POEKaU9drPqyUfLqDXpwftbFwEkMuAjR9kO9Y8ZdiEAp-7O6xnP5%7EfmDRd-2GUgnicZcMB03HRFzb4vsj0sBm-xCq5PZsqV0DD6SOcxRVjS6m7JQy-OdWUPXSuq8jM2nreHu%7EVPWvuJ2WUq1hxKzdLuBGLms6gyklXhbt7SmEra2J1NSfNFkNm-Y2rwKs5vuzSM0QssEEd60JSWUVrRX2-MbRGbhhOCuVU%7ExblqdYun1EdU4edPLaYyfIzhmjA8WyLUYZJu0vOYzI2hb0g0DIw__&Key-Pair-Id=K2L8F4GPSG1IFC'), (b'X-Powered-By', b'huggingface-moon'), (b'X-Request-Id', b'Root=1-6a1903ef-448c8dc6040cd6604f102f5f;4907533d-b775-469a-9a6f-d2d56581b447'), (b'RateLimit', b'"resolvers";r=2996;t=225'), (b'RateLimit-Policy', b'"fixed window";"resolvers";q=3000;w=300'), (b'cross-origin-opener-policy', b'same-origin'), (b'Referrer-Policy', b'strict-origin-when-cross-origin'), (b'Access-Control-Max-Age', b'86400'), (b'Access-Control-Allow-Origin', b'https://huggingface.co'), (b'Vary', b'Origin, Accept'), (b'Access-Control-Expose-Headers', b'X-Repo-Commit,X-Request-Id,X-Error-Code,X-Error-Message,X-Total-Count,ETag,Link,Accept-Ranges,Content-Range,X-Linked-Size,X-Linked-ETag,X-Xet-Hash'), (b'X-Repo-Commit', b'60e4365989619db6365ba92b1169d5dcc143d165'), (b'Accept-Ranges', b'bytes'), (b'X-Hub-Cache', b'MISS'), (b'X-Linked-Size', b'19627000'), (b'X-Linked-ETag', b'"1be729cd30827ec597a7601d7b10ce1d6a50729b79119142761fbb9bba090d5f"'), (b'X-Xet-Hash', b'14d6f82ae8c3d7079d999dda8bccf13571711b41fa1c4d267c9d8a60374b4e2f'), (b'Link', b'<https://huggingface.co/api/models/lerobot/resnet10/xet-read-token/60e4365989619db6365ba92b1169d5dcc143d165>; rel="xet-auth", <https://cas-server.xethub.hf.co/v1/reconstructions/14d6f82ae8c3d7079d999dda8bccf13571711b41fa1c4d267c9d8a60374b4e2f>; rel="xet-reconstruction-info"'), (b'X-Cache', b'Miss from cloudfront'), (b'Via', b'1.1 8217c41da9d2395cb259da1f3fbc7cda.cloudfront.net (CloudFront)'), (b'X-Amz-Cf-Pop', b'DFW59-P5'), (b'X-Amz-Cf-Id', b'YByXWekvAvQNDQIhljn8pb7dMz4l7fTWd2Ch9j8uAyJNfATTMphsxQ==')])
+DEBUG 2026-05-28 22:11:43 re/_trace.py:47 receive_response_body.started request=<Request [b'HEAD']>
+DEBUG 2026-05-28 22:11:43 re/_trace.py:47 receive_response_body.complete
+DEBUG 2026-05-28 22:11:43 re/_trace.py:47 response_closed.started
+DEBUG 2026-05-28 22:11:43 re/_trace.py:47 response_closed.complete
+DEBUG 2026-05-28 22:11:43 ock/_api.py:501 Attempting to acquire lock 5745589568 on /Users/jordancarter/.cache/huggingface/hub/.locks/models--lerobot--resnet10/1be729cd30827ec597a7601d7b10ce1d6a50729b79119142761fbb9bba090d5f.lock
+DEBUG 2026-05-28 22:11:43 ock/_api.py:504 Lock 5745589568 acquired on /Users/jordancarter/.cache/huggingface/hub/.locks/models--lerobot--resnet10/1be729cd30827ec597a7601d7b10ce1d6a50729b79119142761fbb9bba090d5f.lock
+DEBUG 2026-05-28 22:11:43 re/_trace.py:47 send_request_headers.started request=<Request [b'GET']>
+DEBUG 2026-05-28 22:11:43 re/_trace.py:47 send_request_headers.complete
+DEBUG 2026-05-28 22:11:43 re/_trace.py:47 send_request_body.started request=<Request [b'GET']>
+DEBUG 2026-05-28 22:11:43 re/_trace.py:47 send_request_body.complete
+DEBUG 2026-05-28 22:11:43 re/_trace.py:47 receive_response_headers.started request=<Request [b'GET']>
+DEBUG 2026-05-28 22:11:43 re/_trace.py:47 receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Content-Type', b'application/json; charset=utf-8'), (b'Content-Length', b'430'), (b'Connection', b'keep-alive'), (b'Date', b'Fri, 29 May 2026 03:11:43 GMT'), (b'ETag', b'W/"1ae-SHGkxv1fME7HL2pv6uGF4stdKWQ"'), (b'X-Powered-By', b'huggingface-moon'), (b'X-Request-Id', b'Root=1-6a1903ef-4ea27db4600018525a21cd7a;fe2e0d3d-75da-47b4-85b6-f74487258289'), (b'RateLimit', b'"api";r=499;t=225'), (b'RateLimit-Policy', b'"fixed window";"api";q=500;w=300'), (b'cross-origin-opener-policy', b'same-origin'), (b'Referrer-Policy', b'strict-origin-when-cross-origin'), (b'Access-Control-Max-Age', b'86400'), (b'Access-Control-Allow-Origin', b'https://huggingface.co'), (b'Vary', b'Origin'), (b'Access-Control-Expose-Headers', b'X-Repo-Commit,X-Request-Id,X-Error-Code,X-Error-Message,X-Total-Count,ETag,Link,Accept-Ranges,Content-Range,X-Linked-Size,X-Linked-ETag,X-Xet-Hash'), (b'X-Xet-Cas-Url', b'https://cas-server.xethub.hf.co'), (b'X-Xet-Token-Expiration', b'1780025203'), (b'X-Xet-Access-Token', b'eyJhbGciOiJIUzI1NiJ9.eyJyZXBvSWQiOiI2OWU1ZWJmZWRiZjA1NGQyYjE5MjhlMmYiLCJ1c2VySWQiOiJwdWJsaWMiLCJhY2Nlc3MiOiJSRUFEIiwidXNlUHJpdmF0ZUxpbmsiOmZhbHNlLCJoZkNkblRpZXIiOiJ1bmF1dGhlbnRpY2F0ZWQiLCJyZXBvX3N0b3JhZ2VfdHlwZSI6ImdpdCIsImlhdCI6MTc4MDAyNDMwMywiZXhwIjoxNzgwMDI1MjAzLCJpc3MiOiJodHRwczovL2h1Z2dpbmdmYWNlLmNvIn0.-Sy476gUZohdSXErlhF8zRqCX3F_s5mSicZt-zw4gXY'), (b'X-Cache', b'Miss from cloudfront'), (b'Via', b'1.1 8217c41da9d2395cb259da1f3fbc7cda.cloudfront.net (CloudFront)'), (b'X-Amz-Cf-Pop', b'DFW59-P5'), (b'X-Amz-Cf-Id', b'JGARVz_yv6h81exXzOlA89AXAn6xCnegN1SrhROuDS7fxXdkrY1TUQ==')])
+DEBUG 2026-05-28 22:11:43 re/_trace.py:47 receive_response_body.started request=<Request [b'GET']>
+DEBUG 2026-05-28 22:11:43 re/_trace.py:47 receive_response_body.complete
+DEBUG 2026-05-28 22:11:43 re/_trace.py:47 response_closed.started
+DEBUG 2026-05-28 22:11:43 re/_trace.py:47 response_closed.complete
+DEBUG 2026-05-28 22:11:45 ock/_api.py:541 Attempting to release lock 5745589568 on /Users/jordancarter/.cache/huggingface/hub/.locks/models--lerobot--resnet10/1be729cd30827ec597a7601d7b10ce1d6a50729b79119142761fbb9bba090d5f.lock
+DEBUG 2026-05-28 22:11:45 ock/_api.py:545 Lock 5745589568 released on /Users/jordancarter/.cache/huggingface/hub/.locks/models--lerobot--resnet10/1be729cd30827ec597a7601d7b10ce1d6a50729b79119142761fbb9bba090d5f.lock
+DEBUG 2026-05-28 22:11:46 learner.py:1097 [LEARNER] Pushing actor policy to the queue
+DEBUG 2026-05-28 22:11:46 learner.py:1107 [LEARNER] Including discrete critic in state dict push
+INFO 2026-05-28 22:11:46 /learner.py:927 [1m[33mOutput dir:[0m outputs/train/2026-05-28/22-11-42_default
+INFO 2026-05-28 22:11:46 /learner.py:928 cfg.env.task='PandaPickCube-v0'
+INFO 2026-05-28 22:11:46 /learner.py:929 cfg.policy.online_steps=1000000
+INFO 2026-05-28 22:11:46 /learner.py:930 num_learnable_params=1477841 (1M)
+INFO 2026-05-28 22:11:46 /learner.py:931 num_total_params=6383633 (6M)
+INFO 2026-05-28 22:11:46 /learner.py:994 make_dataset offline buffer
+DEBUG 2026-05-28 22:11:46 ock/_api.py:501 Attempting to acquire lock 4412297280 on /Users/jordancarter/.cache/huggingface/datasets/_Users_jordancarter_.cache_huggingface_datasets_parquet_default-a23a12054ec4040a_0.0.0_ec3958b52035e87929642b609b5a781870321434b151a14fbe8fd5a26ff494bb.lock
+DEBUG 2026-05-28 22:11:46 ock/_api.py:504 Lock 4412297280 acquired on /Users/jordancarter/.cache/huggingface/datasets/_Users_jordancarter_.cache_huggingface_datasets_parquet_default-a23a12054ec4040a_0.0.0_ec3958b52035e87929642b609b5a781870321434b151a14fbe8fd5a26ff494bb.lock
+DEBUG 2026-05-28 22:11:46 ock/_api.py:541 Attempting to release lock 4412297280 on /Users/jordancarter/.cache/huggingface/datasets/_Users_jordancarter_.cache_huggingface_datasets_parquet_default-a23a12054ec4040a_0.0.0_ec3958b52035e87929642b609b5a781870321434b151a14fbe8fd5a26ff494bb.lock
+DEBUG 2026-05-28 22:11:46 ock/_api.py:545 Lock 4412297280 released on /Users/jordancarter/.cache/huggingface/datasets/_Users_jordancarter_.cache_huggingface_datasets_parquet_default-a23a12054ec4040a_0.0.0_ec3958b52035e87929642b609b5a781870321434b151a14fbe8fd5a26ff494bb.lock
+DEBUG 2026-05-28 22:11:46 ock/_api.py:501 Attempting to acquire lock 14439215088 on /Users/jordancarter/.cache/huggingface/datasets/parquet/default-a23a12054ec4040a/0.0.0/ec3958b52035e87929642b609b5a781870321434b151a14fbe8fd5a26ff494bb_builder.lock
+DEBUG 2026-05-28 22:11:46 ock/_api.py:504 Lock 14439215088 acquired on /Users/jordancarter/.cache/huggingface/datasets/parquet/default-a23a12054ec4040a/0.0.0/ec3958b52035e87929642b609b5a781870321434b151a14fbe8fd5a26ff494bb_builder.lock
+DEBUG 2026-05-28 22:11:46 ns/local.py:383 open file: /Users/jordancarter/.cache/huggingface/datasets/parquet/default-a23a12054ec4040a/0.0.0/ec3958b52035e87929642b609b5a781870321434b151a14fbe8fd5a26ff494bb.incomplete/parquet-train-00000-00000-of-NNNNN.arrow
+DEBUG 2026-05-28 22:11:46 ock/_api.py:501 Attempting to acquire lock 14436990368 on /Users/jordancarter/.cache/huggingface/datasets/parquet/default-a23a12054ec4040a/0.0.0/ec3958b52035e87929642b609b5a781870321434b151a14fbe8fd5a26ff494bb.incomplete_info.lock
+DEBUG 2026-05-28 22:11:46 ock/_api.py:504 Lock 14436990368 acquired on /Users/jordancarter/.cache/huggingface/datasets/parquet/default-a23a12054ec4040a/0.0.0/ec3958b52035e87929642b609b5a781870321434b151a14fbe8fd5a26ff494bb.incomplete_info.lock
+DEBUG 2026-05-28 22:11:46 ns/local.py:383 open file: /Users/jordancarter/.cache/huggingface/datasets/parquet/default-a23a12054ec4040a/0.0.0/ec3958b52035e87929642b609b5a781870321434b151a14fbe8fd5a26ff494bb.incomplete/dataset_info.json
+DEBUG 2026-05-28 22:11:46 ock/_api.py:541 Attempting to release lock 14436990368 on /Users/jordancarter/.cache/huggingface/datasets/parquet/default-a23a12054ec4040a/0.0.0/ec3958b52035e87929642b609b5a781870321434b151a14fbe8fd5a26ff494bb.incomplete_info.lock
+DEBUG 2026-05-28 22:11:46 ock/_api.py:545 Lock 14436990368 released on /Users/jordancarter/.cache/huggingface/datasets/parquet/default-a23a12054ec4040a/0.0.0/ec3958b52035e87929642b609b5a781870321434b151a14fbe8fd5a26ff494bb.incomplete_info.lock
+DEBUG 2026-05-28 22:11:46 ock/_api.py:541 Attempting to release lock 14439215088 on /Users/jordancarter/.cache/huggingface/datasets/parquet/default-a23a12054ec4040a/0.0.0/ec3958b52035e87929642b609b5a781870321434b151a14fbe8fd5a26ff494bb_builder.lock
+DEBUG 2026-05-28 22:11:46 ock/_api.py:545 Lock 14439215088 released on /Users/jordancarter/.cache/huggingface/datasets/parquet/default-a23a12054ec4040a/0.0.0/ec3958b52035e87929642b609b5a781870321434b151a14fbe8fd5a26ff494bb_builder.lock
+INFO 2026-05-28 22:11:46 eo_utils.py:110 Using video codec: libsvtav1
+DEBUG 2026-05-28 22:11:46 ock/_api.py:501 Attempting to acquire lock 14439217008 on /Users/jordancarter/.cache/huggingface/datasets/_Users_jordancarter_.cache_huggingface_datasets_parquet_default-a23a12054ec4040a_0.0.0_ec3958b52035e87929642b609b5a781870321434b151a14fbe8fd5a26ff494bb.lock
+DEBUG 2026-05-28 22:11:46 ock/_api.py:504 Lock 14439217008 acquired on /Users/jordancarter/.cache/huggingface/datasets/_Users_jordancarter_.cache_huggingface_datasets_parquet_default-a23a12054ec4040a_0.0.0_ec3958b52035e87929642b609b5a781870321434b151a14fbe8fd5a26ff494bb.lock
+DEBUG 2026-05-28 22:11:46 ns/local.py:383 open file: /Users/jordancarter/.cache/huggingface/datasets/parquet/default-a23a12054ec4040a/0.0.0/ec3958b52035e87929642b609b5a781870321434b151a14fbe8fd5a26ff494bb/dataset_info.json
+DEBUG 2026-05-28 22:11:46 ock/_api.py:541 Attempting to release lock 14439217008 on /Users/jordancarter/.cache/huggingface/datasets/_Users_jordancarter_.cache_huggingface_datasets_parquet_default-a23a12054ec4040a_0.0.0_ec3958b52035e87929642b609b5a781870321434b151a14fbe8fd5a26ff494bb.lock
+DEBUG 2026-05-28 22:11:46 ock/_api.py:545 Lock 14439217008 released on /Users/jordancarter/.cache/huggingface/datasets/_Users_jordancarter_.cache_huggingface_datasets_parquet_default-a23a12054ec4040a_0.0.0_ec3958b52035e87929642b609b5a781870321434b151a14fbe8fd5a26ff494bb.lock
+DEBUG 2026-05-28 22:11:46 ock/_api.py:501 Attempting to acquire lock 14439533024 on /Users/jordancarter/.cache/huggingface/datasets/parquet/default-a23a12054ec4040a/0.0.0/ec3958b52035e87929642b609b5a781870321434b151a14fbe8fd5a26ff494bb_builder.lock
+DEBUG 2026-05-28 22:11:46 ock/_api.py:504 Lock 14439533024 acquired on /Users/jordancarter/.cache/huggingface/datasets/parquet/default-a23a12054ec4040a/0.0.0/ec3958b52035e87929642b609b5a781870321434b151a14fbe8fd5a26ff494bb_builder.lock
+DEBUG 2026-05-28 22:11:46 ns/local.py:383 open file: /Users/jordancarter/.cache/huggingface/datasets/parquet/default-a23a12054ec4040a/0.0.0/ec3958b52035e87929642b609b5a781870321434b151a14fbe8fd5a26ff494bb/dataset_info.json
+DEBUG 2026-05-28 22:11:46 ock/_api.py:541 Attempting to release lock 14439533024 on /Users/jordancarter/.cache/huggingface/datasets/parquet/default-a23a12054ec4040a/0.0.0/ec3958b52035e87929642b609b5a781870321434b151a14fbe8fd5a26ff494bb_builder.lock
+DEBUG 2026-05-28 22:11:46 ock/_api.py:545 Lock 14439533024 released on /Users/jordancarter/.cache/huggingface/datasets/parquet/default-a23a12054ec4040a/0.0.0/ec3958b52035e87929642b609b5a781870321434b151a14fbe8fd5a26ff494bb_builder.lock
+DEBUG 2026-05-28 22:11:46 ock/_api.py:501 Attempting to acquire lock 14439364992 on /Users/jordancarter/.cache/huggingface/datasets/_Users_jordancarter_.cache_huggingface_datasets_parquet_default-3f282a73f6539afb_0.0.0_ec3958b52035e87929642b609b5a781870321434b151a14fbe8fd5a26ff494bb.lock
+DEBUG 2026-05-28 22:11:46 ock/_api.py:504 Lock 14439364992 acquired on /Users/jordancarter/.cache/huggingface/datasets/_Users_jordancarter_.cache_huggingface_datasets_parquet_default-3f282a73f6539afb_0.0.0_ec3958b52035e87929642b609b5a781870321434b151a14fbe8fd5a26ff494bb.lock
+DEBUG 2026-05-28 22:11:46 ock/_api.py:541 Attempting to release lock 14439364992 on /Users/jordancarter/.cache/huggingface/datasets/_Users_jordancarter_.cache_huggingface_datasets_parquet_default-3f282a73f6539afb_0.0.0_ec3958b52035e87929642b609b5a781870321434b151a14fbe8fd5a26ff494bb.lock
+DEBUG 2026-05-28 22:11:46 ock/_api.py:545 Lock 14439364992 released on /Users/jordancarter/.cache/huggingface/datasets/_Users_jordancarter_.cache_huggingface_datasets_parquet_default-3f282a73f6539afb_0.0.0_ec3958b52035e87929642b609b5a781870321434b151a14fbe8fd5a26ff494bb.lock
+DEBUG 2026-05-28 22:11:46 ock/_api.py:501 Attempting to acquire lock 14439364896 on /Users/jordancarter/.cache/huggingface/datasets/parquet/default-3f282a73f6539afb/0.0.0/ec3958b52035e87929642b609b5a781870321434b151a14fbe8fd5a26ff494bb_builder.lock
+DEBUG 2026-05-28 22:11:46 ock/_api.py:504 Lock 14439364896 acquired on /Users/jordancarter/.cache/huggingface/datasets/parquet/default-3f282a73f6539afb/0.0.0/ec3958b52035e87929642b609b5a781870321434b151a14fbe8fd5a26ff494bb_builder.lock
+DEBUG 2026-05-28 22:11:46 ns/local.py:383 open file: /Users/jordancarter/.cache/huggingface/datasets/parquet/default-3f282a73f6539afb/0.0.0/ec3958b52035e87929642b609b5a781870321434b151a14fbe8fd5a26ff494bb.incomplete/parquet-train-00000-00000-of-NNNNN.arrow
+DEBUG 2026-05-28 22:11:46 ock/_api.py:501 Attempting to acquire lock 14439469552 on /Users/jordancarter/.cache/huggingface/datasets/parquet/default-3f282a73f6539afb/0.0.0/ec3958b52035e87929642b609b5a781870321434b151a14fbe8fd5a26ff494bb.incomplete_info.lock
+DEBUG 2026-05-28 22:11:46 ock/_api.py:504 Lock 14439469552 acquired on /Users/jordancarter/.cache/huggingface/datasets/parquet/default-3f282a73f6539afb/0.0.0/ec3958b52035e87929642b609b5a781870321434b151a14fbe8fd5a26ff494bb.incomplete_info.lock
+DEBUG 2026-05-28 22:11:46 ns/local.py:383 open file: /Users/jordancarter/.cache/huggingface/datasets/parquet/default-3f282a73f6539afb/0.0.0/ec3958b52035e87929642b609b5a781870321434b151a14fbe8fd5a26ff494bb.incomplete/dataset_info.json
+DEBUG 2026-05-28 22:11:46 ock/_api.py:541 Attempting to release lock 14439469552 on /Users/jordancarter/.cache/huggingface/datasets/parquet/default-3f282a73f6539afb/0.0.0/ec3958b52035e87929642b609b5a781870321434b151a14fbe8fd5a26ff494bb.incomplete_info.lock
+DEBUG 2026-05-28 22:11:46 ock/_api.py:545 Lock 14439469552 released on /Users/jordancarter/.cache/huggingface/datasets/parquet/default-3f282a73f6539afb/0.0.0/ec3958b52035e87929642b609b5a781870321434b151a14fbe8fd5a26ff494bb.incomplete_info.lock
+DEBUG 2026-05-28 22:11:46 ock/_api.py:541 Attempting to release lock 14439364896 on /Users/jordancarter/.cache/huggingface/datasets/parquet/default-3f282a73f6539afb/0.0.0/ec3958b52035e87929642b609b5a781870321434b151a14fbe8fd5a26ff494bb_builder.lock
+DEBUG 2026-05-28 22:11:46 ock/_api.py:545 Lock 14439364896 released on /Users/jordancarter/.cache/huggingface/datasets/parquet/default-3f282a73f6539afb/0.0.0/ec3958b52035e87929642b609b5a781870321434b151a14fbe8fd5a26ff494bb_builder.lock
+INFO 2026-05-28 22:11:46 learner.py:1004 Convert to a offline replay buffer
+DEBUG 2026-05-28 22:11:48 ns/local.py:383 open file: /Users/jordancarter/.cache/huggingface/lerobot/lilkm/pick_cube_franka_panda_30/videos/observation.images.front/chunk-000/file-000.mp4
+DEBUG 2026-05-28 22:11:48 ns/local.py:383 open file: /Users/jordancarter/.cache/huggingface/lerobot/lilkm/pick_cube_franka_panda_30/videos/observation.images.wrist/chunk-000/file-000.mp4
+INFO 2026-05-28 22:11:49 r_service.py:91 [LEARNER] Received request to receive transitions from the Actor
+INFO 2026-05-28 22:11:49 ort/utils.py:77 [LEARNER] transitions Starting receiver
+INFO 2026-05-28 22:11:49 _service.py:105 [LEARNER] Received request to receive interactions from the Actor
+INFO 2026-05-28 22:11:49 ort/utils.py:77 [LEARNER] interactions Starting receiver
+INFO 2026-05-28 22:11:49 r_service.py:56 [LEARNER] Received request to stream parameters from the Actor
+INFO 2026-05-28 22:11:49 r_service.py:68 [LEARNER] Push parameters to the Actor
+DEBUG 2026-05-28 22:11:49 ort/utils.py:53 [LEARNER] Sending parameters Buffer size 22.14576244354248 MB with
+DEBUG 2026-05-28 22:11:49 ort/utils.py:68 [LEARNER] Sending parameters Sent 2097152/23221515 bytes with state 1
+DEBUG 2026-05-28 22:11:49 ort/utils.py:68 [LEARNER] Sending parameters Sent 4194304/23221515 bytes with state 2
+DEBUG 2026-05-28 22:11:49 ort/utils.py:68 [LEARNER] Sending parameters Sent 6291456/23221515 bytes with state 2
+DEBUG 2026-05-28 22:11:49 ort/utils.py:68 [LEARNER] Sending parameters Sent 8388608/23221515 bytes with state 2
+DEBUG 2026-05-28 22:11:49 ort/utils.py:68 [LEARNER] Sending parameters Sent 10485760/23221515 bytes with state 2
+DEBUG 2026-05-28 22:11:49 ort/utils.py:68 [LEARNER] Sending parameters Sent 12582912/23221515 bytes with state 2
+DEBUG 2026-05-28 22:11:49 ort/utils.py:68 [LEARNER] Sending parameters Sent 14680064/23221515 bytes with state 2
+DEBUG 2026-05-28 22:11:49 ort/utils.py:68 [LEARNER] Sending parameters Sent 16777216/23221515 bytes with state 2
+DEBUG 2026-05-28 22:11:49 ort/utils.py:68 [LEARNER] Sending parameters Sent 18874368/23221515 bytes with state 2
+DEBUG 2026-05-28 22:11:49 ort/utils.py:68 [LEARNER] Sending parameters Sent 20971520/23221515 bytes with state 2
+DEBUG 2026-05-28 22:11:49 ort/utils.py:68 [LEARNER] Sending parameters Sent 23068672/23221515 bytes with state 2
+DEBUG 2026-05-28 22:11:49 ort/utils.py:68 [LEARNER] Sending parameters Sent 23221515/23221515 bytes with state 3
+DEBUG 2026-05-28 22:11:49 ort/utils.py:70 [LEARNER] Sending parameters Published 22.14576244354248 MB
+INFO 2026-05-28 22:11:49 r_service.py:84 [LEARNER] Parameters sent
+INFO 2026-05-28 22:11:53 /learner.py:343 Starting learner thread
+DEBUG 2026-05-28 22:12:02 ort/utils.py:79 [LEARNER] interactions Received item
+DEBUG 2026-05-28 22:12:02 ort/utils.py:96 [LEARNER] interactions Received data at step end size 191
+DEBUG 2026-05-28 22:12:02 rt/utils.py:107 [LEARNER] interactions Queue updated
+DEBUG 2026-05-28 22:12:02 ort/utils.py:79 [LEARNER] transitions Received item
+DEBUG 2026-05-28 22:12:02 ort/utils.py:88 [LEARNER] transitions Received data at step 0
+DEBUG 2026-05-28 22:12:02 ort/utils.py:79 [LEARNER] transitions Received item
+DEBUG 2026-05-28 22:12:02 ort/utils.py:93 [LEARNER] transitions Received data at step 1
+DEBUG 2026-05-28 22:12:02 ort/utils.py:79 [LEARNER] transitions Received item
+DEBUG 2026-05-28 22:12:02 ort/utils.py:93 [LEARNER] transitions Received data at step 2
+DEBUG 2026-05-28 22:12:02 ort/utils.py:79 [LEARNER] transitions Received item
+DEBUG 2026-05-28 22:12:02 ort/utils.py:93 [LEARNER] transitions Received data at step 3
+DEBUG 2026-05-28 22:12:02 ort/utils.py:79 [LEARNER] transitions Received item
+DEBUG 2026-05-28 22:12:02 ort/utils.py:93 [LEARNER] transitions Received data at step 4
+DEBUG 2026-05-28 22:12:02 ort/utils.py:79 [LEARNER] transitions Received item
+DEBUG 2026-05-28 22:12:02 ort/utils.py:93 [LEARNER] transitions Received data at step 5
+DEBUG 2026-05-28 22:12:02 ort/utils.py:79 [LEARNER] transitions Received item
+DEBUG 2026-05-28 22:12:02 ort/utils.py:93 [LEARNER] transitions Received data at step 6
+DEBUG 2026-05-28 22:12:02 ort/utils.py:79 [LEARNER] transitions Received item
+DEBUG 2026-05-28 22:12:02 ort/utils.py:93 [LEARNER] transitions Received data at step 7
+DEBUG 2026-05-28 22:12:02 ort/utils.py:79 [LEARNER] transitions Received item
+DEBUG 2026-05-28 22:12:02 ort/utils.py:93 [LEARNER] transitions Received data at step 8
+DEBUG 2026-05-28 22:12:02 ort/utils.py:79 [LEARNER] transitions Received item
+DEBUG 2026-05-28 22:12:02 ort/utils.py:93 [LEARNER] transitions Received data at step 9
+DEBUG 2026-05-28 22:12:02 ort/utils.py:79 [LEARNER] transitions Received item
+DEBUG 2026-05-28 22:12:02 ort/utils.py:93 [LEARNER] transitions Received data at step 10
+DEBUG 2026-05-28 22:12:02 ort/utils.py:79 [LEARNER] transitions Received item
+DEBUG 2026-05-28 22:12:02 ort/utils.py:93 [LEARNER] transitions Received data at step 11
+DEBUG 2026-05-28 22:12:02 ort/utils.py:79 [LEARNER] transitions Received item
+DEBUG 2026-05-28 22:12:02 ort/utils.py:93 [LEARNER] transitions Received data at step 12
+DEBUG 2026-05-28 22:12:02 ort/utils.py:79 [LEARNER] transitions Received item
+DEBUG 2026-05-28 22:12:02 ort/utils.py:93 [LEARNER] transitions Received data at step 13
+DEBUG 2026-05-28 22:12:02 ort/utils.py:79 [LEARNER] transitions Received item
+DEBUG 2026-05-28 22:12:02 ort/utils.py:93 [LEARNER] transitions Received data at step 14
+DEBUG 2026-05-28 22:12:02 ort/utils.py:79 [LEARNER] transitions Received item
+DEBUG 2026-05-28 22:12:02 ort/utils.py:93 [LEARNER] transitions Received data at step 15
+DEBUG 2026-05-28 22:12:02 ort/utils.py:79 [LEARNER] transitions Received item
+DEBUG 2026-05-28 22:12:02 ort/utils.py:93 [LEARNER] transitions Received data at step 16
+DEBUG 2026-05-28 22:12:02 ort/utils.py:79 [LEARNER] transitions Received item
+DEBUG 2026-05-28 22:12:02 ort/utils.py:93 [LEARNER] transitions Received data at step 17
+DEBUG 2026-05-28 22:12:02 ort/utils.py:79 [LEARNER] transitions Received item
+DEBUG 2026-05-28 22:12:02 ort/utils.py:93 [LEARNER] transitions Received data at step 18
+DEBUG 2026-05-28 22:12:02 ort/utils.py:79 [LEARNER] transitions Received item
+DEBUG 2026-05-28 22:12:02 ort/utils.py:96 [LEARNER] transitions Received data at step end size 39873041
+DEBUG 2026-05-28 22:12:02 rt/utils.py:107 [LEARNER] transitions Queue updated
+DEBUG 2026-05-28 22:12:04 ock/_api.py:501 Attempting to acquire lock 14778739616 on /var/folders/rv/90bv2mgj1317k77t4ns1c59r0000gn/T/torchinductor_jordancarter/locks/cv4nrwwervtipubuibtbshezpxmefso4ysyfebeuuhcqunwbl5oz.lock
+DEBUG 2026-05-28 22:12:04 ock/_api.py:504 Lock 14778739616 acquired on /var/folders/rv/90bv2mgj1317k77t4ns1c59r0000gn/T/torchinductor_jordancarter/locks/cv4nrwwervtipubuibtbshezpxmefso4ysyfebeuuhcqunwbl5oz.lock
+DEBUG 2026-05-28 22:12:08 ock/_api.py:541 Attempting to release lock 14778739616 on /var/folders/rv/90bv2mgj1317k77t4ns1c59r0000gn/T/torchinductor_jordancarter/locks/cv4nrwwervtipubuibtbshezpxmefso4ysyfebeuuhcqunwbl5oz.lock
+DEBUG 2026-05-28 22:12:08 ock/_api.py:545 Lock 14778739616 released on /var/folders/rv/90bv2mgj1317k77t4ns1c59r0000gn/T/torchinductor_jordancarter/locks/cv4nrwwervtipubuibtbshezpxmefso4ysyfebeuuhcqunwbl5oz.lock
+ERROR 2026-05-28 22:12:08 /learner.py:232 [LEARNER] Unhandled exception in training loop
+INFO 2026-05-28 22:12:08 /learner.py:671 [LEARNER] Stopping gRPC server...
+INFO 2026-05-28 22:12:08 r_service.py:86 [LEARNER] Stream parameters finished
+INFO 2026-05-28 22:12:08 /learner.py:673 [LEARNER] gRPC server stopped
+INFO 2026-05-28 22:12:08 /learner.py:235 [LEARNER] Closing queues
+INFO 2026-05-28 22:12:08 /learner.py:241 [LEARNER] Communication process joined
+INFO 2026-05-28 22:12:08 /learner.py:247 [LEARNER] Cleanup complete
+INFO 2026-05-28 22:12:08 /learner.py:118 [LEARNER] train_cli finished
+INFO 2026-05-28 22:12:08 learner.py:1202 [LEARNER] main finished
+INFO 2026-05-28 22:12:12 l/process.py:61  Shutdown signal 2 received. Cleaning up…
+DEBUG 2026-05-28 22:12:13 ort/utils.py:79 [LEARNER] interactions Received item
+INFO 2026-05-28 22:12:13 ort/utils.py:81 [LEARNER] interactions Shutting down receiver
+DEBUG 2026-05-28 22:12:13 _service.py:114 [LEARNER] Finished receiving interactions
+DEBUG 2026-05-28 22:12:14 ort/utils.py:79 [LEARNER] transitions Received item
+INFO 2026-05-28 22:12:14 ort/utils.py:81 [LEARNER] transitions Shutting down receiver
+DEBUG 2026-05-28 22:12:14 _service.py:100 [LEARNER] Finished receiving transitions
+DEBUG 2026-05-28 22:12:14 re/_trace.py:47 close.started
+DEBUG 2026-05-28 22:12:14 re/_trace.py:47 close.complete

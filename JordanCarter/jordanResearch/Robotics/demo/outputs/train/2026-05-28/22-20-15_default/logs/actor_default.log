@@ -1,0 +1,227 @@
+INFO 2026-05-28 22:20:15 rl/actor.py:120 Actor logging initialized, writing to outputs/train/2026-05-28/22-20-15_default/logs/actor_default.log
+INFO 2026-05-28 22:20:15 rl/actor.py:457 [ACTOR] Learner service client created
+INFO 2026-05-28 22:20:15 rl/actor.py:130 [ACTOR] Establishing connection with Learner
+INFO 2026-05-28 22:20:15 rl/actor.py:431 [ACTOR] Send ready message to Learner
+INFO 2026-05-28 22:20:15 rl/actor.py:140 [ACTOR] Connection with Learner established
+INFO 2026-05-28 22:20:15 rl/actor.py:475 [ACTOR] Start receiving parameters from the Learner
+INFO 2026-05-28 22:20:15 rl/actor.py:241 make_env online
+INFO 2026-05-28 22:20:15 ort/utils.py:77 [ACTOR] parameters Starting receiver
+DEBUG 2026-05-28 22:20:15 ort/utils.py:79 [ACTOR] parameters Received item
+DEBUG 2026-05-28 22:20:15 ort/utils.py:88 [ACTOR] parameters Received data at step 0
+DEBUG 2026-05-28 22:20:15 ort/utils.py:79 [ACTOR] parameters Received item
+DEBUG 2026-05-28 22:20:15 ort/utils.py:93 [ACTOR] parameters Received data at step 1
+DEBUG 2026-05-28 22:20:15 ort/utils.py:79 [ACTOR] parameters Received item
+DEBUG 2026-05-28 22:20:15 ort/utils.py:93 [ACTOR] parameters Received data at step 2
+DEBUG 2026-05-28 22:20:15 ort/utils.py:79 [ACTOR] parameters Received item
+DEBUG 2026-05-28 22:20:15 ort/utils.py:93 [ACTOR] parameters Received data at step 3
+DEBUG 2026-05-28 22:20:15 ort/utils.py:79 [ACTOR] parameters Received item
+DEBUG 2026-05-28 22:20:15 ort/utils.py:93 [ACTOR] parameters Received data at step 4
+DEBUG 2026-05-28 22:20:15 ort/utils.py:79 [ACTOR] parameters Received item
+DEBUG 2026-05-28 22:20:15 ort/utils.py:93 [ACTOR] parameters Received data at step 5
+DEBUG 2026-05-28 22:20:15 ort/utils.py:79 [ACTOR] parameters Received item
+DEBUG 2026-05-28 22:20:15 ort/utils.py:93 [ACTOR] parameters Received data at step 6
+DEBUG 2026-05-28 22:20:15 ort/utils.py:79 [ACTOR] parameters Received item
+DEBUG 2026-05-28 22:20:15 ort/utils.py:93 [ACTOR] parameters Received data at step 7
+DEBUG 2026-05-28 22:20:15 ort/utils.py:79 [ACTOR] parameters Received item
+DEBUG 2026-05-28 22:20:15 ort/utils.py:93 [ACTOR] parameters Received data at step 8
+DEBUG 2026-05-28 22:20:15 ort/utils.py:79 [ACTOR] parameters Received item
+DEBUG 2026-05-28 22:20:15 ort/utils.py:93 [ACTOR] parameters Received data at step 9
+DEBUG 2026-05-28 22:20:15 ort/utils.py:79 [ACTOR] parameters Received item
+DEBUG 2026-05-28 22:20:15 ort/utils.py:93 [ACTOR] parameters Received data at step 10
+DEBUG 2026-05-28 22:20:15 ort/utils.py:79 [ACTOR] parameters Received item
+DEBUG 2026-05-28 22:20:15 ort/utils.py:96 [ACTOR] parameters Received data at step end size 23221515
+DEBUG 2026-05-28 22:20:15 rt/utils.py:107 [ACTOR] parameters Queue updated
+INFO 2026-05-28 22:20:15 rl/actor.py:510 [ACTOR] Received policy loop stopped
+WARNING 2026-05-28 22:20:16 ice_utils.py:54 Using CPU, this will be slow.
+INFO 2026-05-28 22:20:16 rl/actor.py:252 make_policy
+WARNING 2026-05-28 22:20:16 /factory.py:498 You are instantiating a policy from scratch and its features are parsed from an environment rather than a dataset. Normalization modules inside the policy will have infinite values by default without stats from a dataset.
+DEBUG 2026-05-28 22:20:16 re/_trace.py:47 connect_tcp.started host='huggingface.co' port=443 local_address=None timeout=10 socket_options=None
+DEBUG 2026-05-28 22:20:16 re/_trace.py:47 connect_tcp.complete return_value=<httpcore._backends.sync.SyncStream object at 0x16ec32360>
+DEBUG 2026-05-28 22:20:16 re/_trace.py:47 start_tls.started ssl_context=<ssl.SSLContext object at 0x3551b6150> server_hostname='huggingface.co' timeout=10
+DEBUG 2026-05-28 22:20:16 re/_trace.py:47 start_tls.complete return_value=<httpcore._backends.sync.SyncStream object at 0x16eb6f6b0>
+DEBUG 2026-05-28 22:20:16 re/_trace.py:47 send_request_headers.started request=<Request [b'HEAD']>
+DEBUG 2026-05-28 22:20:16 re/_trace.py:47 send_request_headers.complete
+DEBUG 2026-05-28 22:20:16 re/_trace.py:47 send_request_body.started request=<Request [b'HEAD']>
+DEBUG 2026-05-28 22:20:16 re/_trace.py:47 send_request_body.complete
+DEBUG 2026-05-28 22:20:16 re/_trace.py:47 receive_response_headers.started request=<Request [b'HEAD']>
+DEBUG 2026-05-28 22:20:16 re/_trace.py:47 receive_response_headers.complete return_value=(b'HTTP/1.1', 307, b'Temporary Redirect', [(b'Content-Type', b'text/plain; charset=utf-8'), (b'Content-Length', b'236'), (b'Connection', b'keep-alive'), (b'Date', b'Fri, 29 May 2026 03:20:16 GMT'), (b'Location', b'/api/resolve-cache/models/lerobot/resnet10/60e4365989619db6365ba92b1169d5dcc143d165/config.json?%2Flerobot%2Fresnet10%2Fresolve%2Fmain%2Fconfig.json=&etag=%22661ebcf4aec142f47be95003ad8784697d8d0af2%22'), (b'X-Powered-By', b'huggingface-moon'), (b'X-Request-Id', b'Root=1-6a1905f0-5088f9b62e2f09580eff53bb;b1a3dd1d-f3f9-4932-b53f-2a759f15d85f'), (b'RateLimit', b'"resolvers";r=2990;t=12'), (b'RateLimit-Policy', b'"fixed window";"resolvers";q=3000;w=300'), (b'cross-origin-opener-policy', b'same-origin'), (b'Referrer-Policy', b'strict-origin-when-cross-origin'), (b'Access-Control-Max-Age', b'86400'), (b'Access-Control-Allow-Origin', b'https://huggingface.co'), (b'Vary', b'Origin, Accept'), (b'Access-Control-Expose-Headers', b'X-Repo-Commit,X-Request-Id,X-Error-Code,X-Error-Message,X-Total-Count,ETag,Link,Accept-Ranges,Content-Range,X-Linked-Size,X-Linked-ETag,X-Xet-Hash'), (b'X-Repo-Commit', b'60e4365989619db6365ba92b1169d5dcc143d165'), (b'Accept-Ranges', b'bytes'), (b'X-Hub-Cache', b'MISS'), (b'Content-Disposition', b'inline; filename*=UTF-8\'\'config.json; filename="config.json";'), (b'Content-Security-Policy', b"default-src 'none'; sandbox"), (b'X-Linked-ETag', b'"661ebcf4aec142f47be95003ad8784697d8d0af2"'), (b'X-Cache', b'Miss from cloudfront'), (b'Via', b'1.1 c9e462b6fec2db2b38560afd1b3c7ef8.cloudfront.net (CloudFront)'), (b'X-Amz-Cf-Pop', b'DFW59-P5'), (b'X-Amz-Cf-Id', b'fxom9OAIu_sPrfBsJqsfHnfADd1E-bjHK_K6-wleHlKnPzA_Tj7zIA==')])
+DEBUG 2026-05-28 22:20:16 re/_trace.py:47 receive_response_body.started request=<Request [b'HEAD']>
+DEBUG 2026-05-28 22:20:16 re/_trace.py:47 receive_response_body.complete
+DEBUG 2026-05-28 22:20:16 re/_trace.py:47 response_closed.started
+DEBUG 2026-05-28 22:20:16 re/_trace.py:47 response_closed.complete
+DEBUG 2026-05-28 22:20:16 re/_trace.py:47 send_request_headers.started request=<Request [b'HEAD']>
+DEBUG 2026-05-28 22:20:16 re/_trace.py:47 send_request_headers.complete
+DEBUG 2026-05-28 22:20:16 re/_trace.py:47 send_request_body.started request=<Request [b'HEAD']>
+DEBUG 2026-05-28 22:20:16 re/_trace.py:47 send_request_body.complete
+DEBUG 2026-05-28 22:20:16 re/_trace.py:47 receive_response_headers.started request=<Request [b'HEAD']>
+DEBUG 2026-05-28 22:20:16 re/_trace.py:47 receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Content-Type', b'text/plain; charset=utf-8'), (b'Content-Length', b'443'), (b'Connection', b'keep-alive'), (b'Date', b'Mon, 11 May 2026 10:35:04 GMT'), (b'ETag', b'"661ebcf4aec142f47be95003ad8784697d8d0af2"'), (b'X-Powered-By', b'huggingface-moon'), (b'X-Request-Id', b'Root=1-6a01b0d8-64f607bd6b98825c60c53bbe;c37fa827-1c81-4726-b652-f81e3c98ed09'), (b'RateLimit', b'"resolvers";r=2999;t=80'), (b'RateLimit-Policy', b'"fixed window";"resolvers";q=3000;w=300'), (b'cross-origin-opener-policy', b'same-origin'), (b'Referrer-Policy', b'strict-origin-when-cross-origin'), (b'Access-Control-Max-Age', b'86400'), (b'Access-Control-Allow-Origin', b'https://huggingface.co'), (b'Access-Control-Expose-Headers', b'X-Repo-Commit,X-Request-Id,X-Error-Code,X-Error-Message,X-Total-Count,ETag,Link,Accept-Ranges,Content-Range,X-Linked-Size,X-Linked-ETag,X-Xet-Hash'), (b'X-Repo-Commit', b'60e4365989619db6365ba92b1169d5dcc143d165'), (b'Accept-Ranges', b'bytes'), (b'Content-Disposition', b'inline; filename*=UTF-8\'\'config.json; filename="config.json";'), (b'Content-Security-Policy', b"default-src 'none'; sandbox"), (b'Vary', b'Origin'), (b'X-Cache', b'Hit from cloudfront'), (b'Via', b'1.1 c9e462b6fec2db2b38560afd1b3c7ef8.cloudfront.net (CloudFront)'), (b'X-Amz-Cf-Pop', b'DFW59-P5'), (b'X-Amz-Cf-Id', b'TF1EPey404C5DcJbi37VqPzy5P4BtSNnjIp_hK8z7r4JDv1EptxnbA=='), (b'Age', b'1529112')])
+DEBUG 2026-05-28 22:20:16 re/_trace.py:47 receive_response_body.started request=<Request [b'HEAD']>
+DEBUG 2026-05-28 22:20:16 re/_trace.py:47 receive_response_body.complete
+DEBUG 2026-05-28 22:20:16 re/_trace.py:47 response_closed.started
+DEBUG 2026-05-28 22:20:16 re/_trace.py:47 response_closed.complete
+DEBUG 2026-05-28 22:20:16 re/_trace.py:47 send_request_headers.started request=<Request [b'HEAD']>
+DEBUG 2026-05-28 22:20:16 re/_trace.py:47 send_request_headers.complete
+DEBUG 2026-05-28 22:20:16 re/_trace.py:47 send_request_body.started request=<Request [b'HEAD']>
+DEBUG 2026-05-28 22:20:16 re/_trace.py:47 send_request_body.complete
+DEBUG 2026-05-28 22:20:16 re/_trace.py:47 receive_response_headers.started request=<Request [b'HEAD']>
+DEBUG 2026-05-28 22:20:16 re/_trace.py:47 receive_response_headers.complete return_value=(b'HTTP/1.1', 307, b'Temporary Redirect', [(b'Content-Type', b'text/plain; charset=utf-8'), (b'Content-Length', b'260'), (b'Connection', b'keep-alive'), (b'Date', b'Fri, 29 May 2026 03:20:16 GMT'), (b'Location', b'/api/resolve-cache/models/lerobot/resnet10/60e4365989619db6365ba92b1169d5dcc143d165/configuration_resnet.py?%2Flerobot%2Fresnet10%2Fresolve%2Fmain%2Fconfiguration_resnet.py=&etag=%224052d0071a8ee34021221da84f42607fb28dbbfb%22'), (b'X-Powered-By', b'huggingface-moon'), (b'X-Request-Id', b'Root=1-6a1905f0-4e38196b43a853aa33debae9;3d4ee628-d40a-4160-9c44-f421f5c95253'), (b'RateLimit', b'"resolvers";r=2989;t=12'), (b'RateLimit-Policy', b'"fixed window";"resolvers";q=3000;w=300'), (b'cross-origin-opener-policy', b'same-origin'), (b'Referrer-Policy', b'strict-origin-when-cross-origin'), (b'Access-Control-Max-Age', b'86400'), (b'Access-Control-Allow-Origin', b'https://huggingface.co'), (b'Vary', b'Origin, Accept'), (b'Access-Control-Expose-Headers', b'X-Repo-Commit,X-Request-Id,X-Error-Code,X-Error-Message,X-Total-Count,ETag,Link,Accept-Ranges,Content-Range,X-Linked-Size,X-Linked-ETag,X-Xet-Hash'), (b'X-Repo-Commit', b'60e4365989619db6365ba92b1169d5dcc143d165'), (b'Accept-Ranges', b'bytes'), (b'X-Hub-Cache', b'MISS'), (b'Content-Disposition', b'inline; filename*=UTF-8\'\'configuration_resnet.py; filename="configuration_resnet.py";'), (b'Content-Security-Policy', b"default-src 'none'; sandbox"), (b'X-Linked-ETag', b'"4052d0071a8ee34021221da84f42607fb28dbbfb"'), (b'X-Cache', b'Miss from cloudfront'), (b'Via', b'1.1 c9e462b6fec2db2b38560afd1b3c7ef8.cloudfront.net (CloudFront)'), (b'X-Amz-Cf-Pop', b'DFW59-P5'), (b'X-Amz-Cf-Id', b'pBJBrIfjrDBvl0bAiYY3rparUTmADhUpj9mMV--LTeGrR7yzCVbjTw==')])
+DEBUG 2026-05-28 22:20:16 re/_trace.py:47 receive_response_body.started request=<Request [b'HEAD']>
+DEBUG 2026-05-28 22:20:16 re/_trace.py:47 receive_response_body.complete
+DEBUG 2026-05-28 22:20:16 re/_trace.py:47 response_closed.started
+DEBUG 2026-05-28 22:20:16 re/_trace.py:47 response_closed.complete
+DEBUG 2026-05-28 22:20:16 re/_trace.py:47 send_request_headers.started request=<Request [b'HEAD']>
+DEBUG 2026-05-28 22:20:16 re/_trace.py:47 send_request_headers.complete
+DEBUG 2026-05-28 22:20:16 re/_trace.py:47 send_request_body.started request=<Request [b'HEAD']>
+DEBUG 2026-05-28 22:20:16 re/_trace.py:47 send_request_body.complete
+DEBUG 2026-05-28 22:20:16 re/_trace.py:47 receive_response_headers.started request=<Request [b'HEAD']>
+DEBUG 2026-05-28 22:20:16 re/_trace.py:47 receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Content-Type', b'text/plain; charset=utf-8'), (b'Content-Length', b'3390'), (b'Connection', b'keep-alive'), (b'Date', b'Mon, 11 May 2026 10:35:09 GMT'), (b'ETag', b'"4052d0071a8ee34021221da84f42607fb28dbbfb"'), (b'X-Powered-By', b'huggingface-moon'), (b'X-Request-Id', b'Root=1-6a01b0dc-0311473b1d241324548083ca;c414bbb9-cabc-435d-8843-7cc3cfa49acd'), (b'RateLimit', b'"resolvers";r=2998;t=148'), (b'RateLimit-Policy', b'"fixed window";"resolvers";q=3000;w=300'), (b'cross-origin-opener-policy', b'same-origin'), (b'Referrer-Policy', b'strict-origin-when-cross-origin'), (b'Access-Control-Max-Age', b'86400'), (b'Access-Control-Allow-Origin', b'https://huggingface.co'), (b'Access-Control-Expose-Headers', b'X-Repo-Commit,X-Request-Id,X-Error-Code,X-Error-Message,X-Total-Count,ETag,Link,Accept-Ranges,Content-Range,X-Linked-Size,X-Linked-ETag,X-Xet-Hash'), (b'X-Repo-Commit', b'60e4365989619db6365ba92b1169d5dcc143d165'), (b'Accept-Ranges', b'bytes'), (b'Content-Disposition', b'inline; filename*=UTF-8\'\'configuration_resnet.py; filename="configuration_resnet.py";'), (b'Content-Security-Policy', b"default-src 'none'; sandbox"), (b'Vary', b'Origin'), (b'X-Cache', b'Hit from cloudfront'), (b'Via', b'1.1 c9e462b6fec2db2b38560afd1b3c7ef8.cloudfront.net (CloudFront)'), (b'X-Amz-Cf-Pop', b'DFW59-P5'), (b'X-Amz-Cf-Id', b'vUhcoVPdLS8yWHxV4gjAJeDDTifbdcsgyl4bZK4_3r1OmjcQfUcplA=='), (b'Age', b'1529107')])
+DEBUG 2026-05-28 22:20:16 re/_trace.py:47 receive_response_body.started request=<Request [b'HEAD']>
+DEBUG 2026-05-28 22:20:16 re/_trace.py:47 receive_response_body.complete
+DEBUG 2026-05-28 22:20:16 re/_trace.py:47 response_closed.started
+DEBUG 2026-05-28 22:20:16 re/_trace.py:47 response_closed.complete
+DEBUG 2026-05-28 22:20:16 re/_trace.py:47 send_request_headers.started request=<Request [b'HEAD']>
+DEBUG 2026-05-28 22:20:16 re/_trace.py:47 send_request_headers.complete
+DEBUG 2026-05-28 22:20:16 re/_trace.py:47 send_request_body.started request=<Request [b'HEAD']>
+DEBUG 2026-05-28 22:20:16 re/_trace.py:47 send_request_body.complete
+DEBUG 2026-05-28 22:20:16 re/_trace.py:47 receive_response_headers.started request=<Request [b'HEAD']>
+DEBUG 2026-05-28 22:20:16 re/_trace.py:47 receive_response_headers.complete return_value=(b'HTTP/1.1', 307, b'Temporary Redirect', [(b'Content-Type', b'text/plain; charset=utf-8'), (b'Content-Length', b'250'), (b'Connection', b'keep-alive'), (b'Date', b'Fri, 29 May 2026 03:20:16 GMT'), (b'Location', b'/api/resolve-cache/models/lerobot/resnet10/60e4365989619db6365ba92b1169d5dcc143d165/modeling_resnet.py?%2Flerobot%2Fresnet10%2Fresolve%2Fmain%2Fmodeling_resnet.py=&etag=%221d1592a7790b6637fd430db5d5c78ade7849e10b%22'), (b'X-Powered-By', b'huggingface-moon'), (b'X-Request-Id', b'Root=1-6a1905f0-38e4a43d5dfc9e3b6b8bb436;a57a61a7-f2ab-4b37-a37a-ecaa5cba113d'), (b'RateLimit', b'"resolvers";r=2988;t=12'), (b'RateLimit-Policy', b'"fixed window";"resolvers";q=3000;w=300'), (b'cross-origin-opener-policy', b'same-origin'), (b'Referrer-Policy', b'strict-origin-when-cross-origin'), (b'Access-Control-Max-Age', b'86400'), (b'Access-Control-Allow-Origin', b'https://huggingface.co'), (b'Vary', b'Origin, Accept'), (b'Access-Control-Expose-Headers', b'X-Repo-Commit,X-Request-Id,X-Error-Code,X-Error-Message,X-Total-Count,ETag,Link,Accept-Ranges,Content-Range,X-Linked-Size,X-Linked-ETag,X-Xet-Hash'), (b'X-Repo-Commit', b'60e4365989619db6365ba92b1169d5dcc143d165'), (b'Accept-Ranges', b'bytes'), (b'X-Hub-Cache', b'MISS'), (b'Content-Disposition', b'inline; filename*=UTF-8\'\'modeling_resnet.py; filename="modeling_resnet.py";'), (b'Content-Security-Policy', b"default-src 'none'; sandbox"), (b'X-Linked-ETag', b'"1d1592a7790b6637fd430db5d5c78ade7849e10b"'), (b'X-Cache', b'Miss from cloudfront'), (b'Via', b'1.1 c9e462b6fec2db2b38560afd1b3c7ef8.cloudfront.net (CloudFront)'), (b'X-Amz-Cf-Pop', b'DFW59-P5'), (b'X-Amz-Cf-Id', b'T-h8BWt01u2mntfa5MAawdOdbmdgwDMLZxVIUOIrb_Owgppe2b9GwA==')])
+DEBUG 2026-05-28 22:20:16 re/_trace.py:47 receive_response_body.started request=<Request [b'HEAD']>
+DEBUG 2026-05-28 22:20:16 re/_trace.py:47 receive_response_body.complete
+DEBUG 2026-05-28 22:20:16 re/_trace.py:47 response_closed.started
+DEBUG 2026-05-28 22:20:16 re/_trace.py:47 response_closed.complete
+DEBUG 2026-05-28 22:20:16 re/_trace.py:47 send_request_headers.started request=<Request [b'HEAD']>
+DEBUG 2026-05-28 22:20:16 re/_trace.py:47 send_request_headers.complete
+DEBUG 2026-05-28 22:20:16 re/_trace.py:47 send_request_body.started request=<Request [b'HEAD']>
+DEBUG 2026-05-28 22:20:16 re/_trace.py:47 send_request_body.complete
+DEBUG 2026-05-28 22:20:16 re/_trace.py:47 receive_response_headers.started request=<Request [b'HEAD']>
+DEBUG 2026-05-28 22:20:16 re/_trace.py:47 receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Content-Type', b'text/plain; charset=utf-8'), (b'Content-Length', b'9888'), (b'Connection', b'keep-alive'), (b'Date', b'Mon, 11 May 2026 10:35:11 GMT'), (b'ETag', b'"1d1592a7790b6637fd430db5d5c78ade7849e10b"'), (b'X-Powered-By', b'huggingface-moon'), (b'X-Request-Id', b'Root=1-6a01b0df-42079a94698d18b4477e2629;501de55a-5933-46a0-8e15-388070d4f141'), (b'RateLimit', b'"resolvers";r=2999;t=289'), (b'RateLimit-Policy', b'"fixed window";"resolvers";q=3000;w=300'), (b'cross-origin-opener-policy', b'same-origin'), (b'Referrer-Policy', b'strict-origin-when-cross-origin'), (b'Access-Control-Max-Age', b'86400'), (b'Access-Control-Allow-Origin', b'https://huggingface.co'), (b'Access-Control-Expose-Headers', b'X-Repo-Commit,X-Request-Id,X-Error-Code,X-Error-Message,X-Total-Count,ETag,Link,Accept-Ranges,Content-Range,X-Linked-Size,X-Linked-ETag,X-Xet-Hash'), (b'X-Repo-Commit', b'60e4365989619db6365ba92b1169d5dcc143d165'), (b'Accept-Ranges', b'bytes'), (b'Content-Disposition', b'inline; filename*=UTF-8\'\'modeling_resnet.py; filename="modeling_resnet.py";'), (b'Content-Security-Policy', b"default-src 'none'; sandbox"), (b'Vary', b'Origin'), (b'X-Cache', b'Hit from cloudfront'), (b'Via', b'1.1 c9e462b6fec2db2b38560afd1b3c7ef8.cloudfront.net (CloudFront)'), (b'X-Amz-Cf-Pop', b'DFW59-P5'), (b'X-Amz-Cf-Id', b'vzuRxkz4g3QyoKR7PifyIhrF8IBlYjAqEPYBGxjrBxsRdx1blm_hvQ=='), (b'Age', b'1529105')])
+DEBUG 2026-05-28 22:20:16 re/_trace.py:47 receive_response_body.started request=<Request [b'HEAD']>
+DEBUG 2026-05-28 22:20:16 re/_trace.py:47 receive_response_body.complete
+DEBUG 2026-05-28 22:20:16 re/_trace.py:47 response_closed.started
+DEBUG 2026-05-28 22:20:16 re/_trace.py:47 response_closed.complete
+INFO 2026-05-28 22:20:17 wrappers.py:306 Reset delay of 1.0 seconds
+DEBUG 2026-05-28 22:20:17 rl/actor.py:621 [ACTOR] Transition queue is empty
+DEBUG 2026-05-28 22:20:17 rl/actor.py:640 [ACTOR] Interaction queue is empty
+DEBUG 2026-05-28 22:20:19 rl/actor.py:621 [ACTOR] Transition queue is empty
+DEBUG 2026-05-28 22:20:19 rl/actor.py:640 [ACTOR] Interaction queue is empty
+DEBUG 2026-05-28 22:20:21 rl/actor.py:621 [ACTOR] Transition queue is empty
+DEBUG 2026-05-28 22:20:21 rl/actor.py:640 [ACTOR] Interaction queue is empty
+DEBUG 2026-05-28 22:20:23 rl/actor.py:621 [ACTOR] Transition queue is empty
+DEBUG 2026-05-28 22:20:23 rl/actor.py:640 [ACTOR] Interaction queue is empty
+DEBUG 2026-05-28 22:20:25 rl/actor.py:621 [ACTOR] Transition queue is empty
+DEBUG 2026-05-28 22:20:25 rl/actor.py:640 [ACTOR] Interaction queue is empty
+ERROR 2026-05-28 22:20:27 rl/actor.py:607 [ACTOR] gRPC error: <_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.UNAVAILABLE
+	details = "failed to connect to all addresses; last error: UNKNOWN: ipv4:127.0.0.1:50051: Failed to connect to remote host: connect: Connection refused (61)"
+	debug_error_string = "UNKNOWN:Error received from peer  {grpc_message:"failed to connect to all addresses; last error: UNKNOWN: ipv4:127.0.0.1:50051: Failed to connect to remote host: connect: Connection refused (61)", grpc_status:14}"
+>
+INFO 2026-05-28 22:20:27 rl/actor.py:609 [ACTOR] Finished streaming interactions
+INFO 2026-05-28 22:20:27 rl/actor.py:613 [ACTOR] Interactions process stopped
+ERROR 2026-05-28 22:20:27 rl/actor.py:554 [ACTOR] gRPC error: <_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.UNAVAILABLE
+	details = "failed to connect to all addresses; last error: UNKNOWN: ipv4:127.0.0.1:50051: Failed to connect to remote host: connect: Connection refused (61)"
+	debug_error_string = "UNKNOWN:Error received from peer  {grpc_status:14, grpc_message:"failed to connect to all addresses; last error: UNKNOWN: ipv4:127.0.0.1:50051: Failed to connect to remote host: connect: Connection refused (61)"}"
+>
+INFO 2026-05-28 22:20:27 rl/actor.py:556 [ACTOR] Finished streaming transitions
+INFO 2026-05-28 22:20:27 rl/actor.py:560 [ACTOR] Transitions process stopped
+DEBUG 2026-05-28 22:20:27 rl/actor.py:621 [ACTOR] Transition queue is empty
+DEBUG 2026-05-28 22:20:27 rl/actor.py:640 [ACTOR] Interaction queue is empty
+INFO 2026-05-28 22:20:28 rl/actor.py:355 [ACTOR] Global step 99: Episode reward: 0.0
+INFO 2026-05-28 22:20:28 rl/actor.py:658 [ACTOR] Load new parameters from Learner.
+INFO 2026-05-28 22:20:28 rl/actor.py:681 [ACTOR] Loaded discrete critic parameters from Learner.
+DEBUG 2026-05-28 22:20:28 rl/actor.py:720 [ACTOR] Average policy frame rate: 70.5137601284052
+DEBUG 2026-05-28 22:20:28 rl/actor.py:721 [ACTOR] Policy frame rate 90th percentile: 63.273317431316386
+INFO 2026-05-28 22:20:28 wrappers.py:306 Reset delay of 1.0 seconds
+DEBUG 2026-05-28 22:20:28 ort/utils.py:53 [ACTOR] Send interactions Buffer size 0.00018215179443359375 MB with
+DEBUG 2026-05-28 22:20:28 ort/utils.py:53 [ACTOR] Send transitions Buffer size 38.02589511871338 MB with
+INFO 2026-05-28 22:20:39 rl/actor.py:355 [ACTOR] Global step 199: Episode reward: 0.0
+DEBUG 2026-05-28 22:20:39 rl/actor.py:720 [ACTOR] Average policy frame rate: 71.89418899547404
+DEBUG 2026-05-28 22:20:39 rl/actor.py:721 [ACTOR] Policy frame rate 90th percentile: 67.57846902507157
+INFO 2026-05-28 22:20:39 wrappers.py:306 Reset delay of 1.0 seconds
+INFO 2026-05-28 22:20:51 rl/actor.py:355 [ACTOR] Global step 299: Episode reward: 0.0
+DEBUG 2026-05-28 22:20:51 rl/actor.py:720 [ACTOR] Average policy frame rate: 66.51604300933639
+DEBUG 2026-05-28 22:20:51 rl/actor.py:721 [ACTOR] Policy frame rate 90th percentile: 57.10325091153195
+INFO 2026-05-28 22:20:51 wrappers.py:306 Reset delay of 1.0 seconds
+INFO 2026-05-28 22:21:02 rl/actor.py:355 [ACTOR] Global step 399: Episode reward: 0.0
+DEBUG 2026-05-28 22:21:02 rl/actor.py:720 [ACTOR] Average policy frame rate: 73.97120609687649
+DEBUG 2026-05-28 22:21:02 rl/actor.py:721 [ACTOR] Policy frame rate 90th percentile: 66.67540873054759
+INFO 2026-05-28 22:21:02 wrappers.py:306 Reset delay of 1.0 seconds
+INFO 2026-05-28 22:21:13 rl/actor.py:355 [ACTOR] Global step 499: Episode reward: 0.0
+DEBUG 2026-05-28 22:21:13 rl/actor.py:720 [ACTOR] Average policy frame rate: 65.37945941372315
+DEBUG 2026-05-28 22:21:13 rl/actor.py:721 [ACTOR] Policy frame rate 90th percentile: 53.48911682947632
+INFO 2026-05-28 22:21:13 wrappers.py:306 Reset delay of 1.0 seconds
+INFO 2026-05-28 22:21:24 rl/actor.py:355 [ACTOR] Global step 599: Episode reward: 0.0
+DEBUG 2026-05-28 22:21:24 rl/actor.py:720 [ACTOR] Average policy frame rate: 71.74309241940169
+DEBUG 2026-05-28 22:21:24 rl/actor.py:721 [ACTOR] Policy frame rate 90th percentile: 61.97247563016376
+INFO 2026-05-28 22:21:24 wrappers.py:306 Reset delay of 1.0 seconds
+INFO 2026-05-28 22:21:35 rl/actor.py:355 [ACTOR] Global step 699: Episode reward: 0.0
+DEBUG 2026-05-28 22:21:35 rl/actor.py:720 [ACTOR] Average policy frame rate: 70.1530857077548
+DEBUG 2026-05-28 22:21:35 rl/actor.py:721 [ACTOR] Policy frame rate 90th percentile: 64.93558954298936
+INFO 2026-05-28 22:21:35 wrappers.py:306 Reset delay of 1.0 seconds
+INFO 2026-05-28 22:21:46 rl/actor.py:355 [ACTOR] Global step 799: Episode reward: 0.0
+DEBUG 2026-05-28 22:21:46 rl/actor.py:720 [ACTOR] Average policy frame rate: 72.7159952855342
+DEBUG 2026-05-28 22:21:46 rl/actor.py:721 [ACTOR] Policy frame rate 90th percentile: 62.6511635033798
+INFO 2026-05-28 22:21:46 wrappers.py:306 Reset delay of 1.0 seconds
+WARNING 2026-05-28 22:21:51 rl/actor.py:731 [ACTOR] Policy FPS 3.1 below required 10 at step 832
+INFO 2026-05-28 22:21:58 rl/actor.py:355 [ACTOR] Global step 899: Episode reward: 0.0
+DEBUG 2026-05-28 22:21:58 rl/actor.py:720 [ACTOR] Average policy frame rate: 54.593749944919246
+DEBUG 2026-05-28 22:21:58 rl/actor.py:721 [ACTOR] Policy frame rate 90th percentile: 57.30972206355502
+INFO 2026-05-28 22:21:58 wrappers.py:306 Reset delay of 1.0 seconds
+INFO 2026-05-28 22:22:09 rl/actor.py:355 [ACTOR] Global step 999: Episode reward: 0.0
+DEBUG 2026-05-28 22:22:09 rl/actor.py:720 [ACTOR] Average policy frame rate: 71.52918695842224
+DEBUG 2026-05-28 22:22:09 rl/actor.py:721 [ACTOR] Policy frame rate 90th percentile: 61.73009273888445
+INFO 2026-05-28 22:22:09 wrappers.py:306 Reset delay of 1.0 seconds
+INFO 2026-05-28 22:22:20 rl/actor.py:355 [ACTOR] Global step 1099: Episode reward: 0.0
+DEBUG 2026-05-28 22:22:20 rl/actor.py:720 [ACTOR] Average policy frame rate: 57.75308739593785
+DEBUG 2026-05-28 22:22:20 rl/actor.py:721 [ACTOR] Policy frame rate 90th percentile: 39.26355224157892
+INFO 2026-05-28 22:22:20 wrappers.py:306 Reset delay of 1.0 seconds
+INFO 2026-05-28 22:22:31 rl/actor.py:355 [ACTOR] Global step 1199: Episode reward: 0.0
+DEBUG 2026-05-28 22:22:31 rl/actor.py:720 [ACTOR] Average policy frame rate: 74.72442095060951
+DEBUG 2026-05-28 22:22:31 rl/actor.py:721 [ACTOR] Policy frame rate 90th percentile: 68.23834706650388
+INFO 2026-05-28 22:22:31 wrappers.py:306 Reset delay of 1.0 seconds
+INFO 2026-05-28 22:22:42 rl/actor.py:355 [ACTOR] Global step 1299: Episode reward: 0.0
+DEBUG 2026-05-28 22:22:42 rl/actor.py:720 [ACTOR] Average policy frame rate: 67.18164210120084
+DEBUG 2026-05-28 22:22:42 rl/actor.py:721 [ACTOR] Policy frame rate 90th percentile: 54.064063952144416
+INFO 2026-05-28 22:22:42 wrappers.py:306 Reset delay of 1.0 seconds
+INFO 2026-05-28 22:22:53 rl/actor.py:355 [ACTOR] Global step 1399: Episode reward: 0.0
+DEBUG 2026-05-28 22:22:53 rl/actor.py:720 [ACTOR] Average policy frame rate: 70.21021925195045
+DEBUG 2026-05-28 22:22:53 rl/actor.py:721 [ACTOR] Policy frame rate 90th percentile: 60.580099876089264
+INFO 2026-05-28 22:22:53 wrappers.py:306 Reset delay of 1.0 seconds
+INFO 2026-05-28 22:23:04 rl/actor.py:355 [ACTOR] Global step 1499: Episode reward: 0.0
+DEBUG 2026-05-28 22:23:04 rl/actor.py:720 [ACTOR] Average policy frame rate: 71.11994688582499
+DEBUG 2026-05-28 22:23:04 rl/actor.py:721 [ACTOR] Policy frame rate 90th percentile: 62.36279949053647
+INFO 2026-05-28 22:23:04 wrappers.py:306 Reset delay of 1.0 seconds
+INFO 2026-05-28 22:23:15 rl/actor.py:355 [ACTOR] Global step 1599: Episode reward: 0.0
+DEBUG 2026-05-28 22:23:15 rl/actor.py:720 [ACTOR] Average policy frame rate: 64.60017686325219
+DEBUG 2026-05-28 22:23:15 rl/actor.py:721 [ACTOR] Policy frame rate 90th percentile: 52.3023739827067
+INFO 2026-05-28 22:23:15 wrappers.py:306 Reset delay of 1.0 seconds
+INFO 2026-05-28 22:23:18 rl/actor.py:355 [ACTOR] Global step 1615: Episode reward: 0.0
+DEBUG 2026-05-28 22:23:18 rl/actor.py:720 [ACTOR] Average policy frame rate: 55.23483867557309
+DEBUG 2026-05-28 22:23:18 rl/actor.py:721 [ACTOR] Policy frame rate 90th percentile: 46.370807373322215
+INFO 2026-05-28 22:23:18 wrappers.py:306 Reset delay of 1.0 seconds
+INFO 2026-05-28 22:23:29 rl/actor.py:355 [ACTOR] Global step 1715: Episode reward: 0.0
+DEBUG 2026-05-28 22:23:29 rl/actor.py:720 [ACTOR] Average policy frame rate: 69.43704246301334
+DEBUG 2026-05-28 22:23:29 rl/actor.py:721 [ACTOR] Policy frame rate 90th percentile: 58.999558139397486
+INFO 2026-05-28 22:23:29 wrappers.py:306 Reset delay of 1.0 seconds
+INFO 2026-05-28 22:23:40 rl/actor.py:355 [ACTOR] Global step 1815: Episode reward: 0.0
+DEBUG 2026-05-28 22:23:40 rl/actor.py:720 [ACTOR] Average policy frame rate: 70.71351247913002
+DEBUG 2026-05-28 22:23:40 rl/actor.py:721 [ACTOR] Policy frame rate 90th percentile: 62.38418056381731
+INFO 2026-05-28 22:23:40 wrappers.py:306 Reset delay of 1.0 seconds
+INFO 2026-05-28 22:23:51 rl/actor.py:355 [ACTOR] Global step 1915: Episode reward: 0.0
+DEBUG 2026-05-28 22:23:51 rl/actor.py:720 [ACTOR] Average policy frame rate: 71.50378242060881
+DEBUG 2026-05-28 22:23:51 rl/actor.py:721 [ACTOR] Policy frame rate 90th percentile: 60.50774957512361
+INFO 2026-05-28 22:23:51 wrappers.py:306 Reset delay of 1.0 seconds
+INFO 2026-05-28 22:24:02 rl/actor.py:355 [ACTOR] Global step 2015: Episode reward: 0.0
+DEBUG 2026-05-28 22:24:02 rl/actor.py:720 [ACTOR] Average policy frame rate: 72.4093909501472
+DEBUG 2026-05-28 22:24:02 rl/actor.py:721 [ACTOR] Policy frame rate 90th percentile: 62.41827116779336
+INFO 2026-05-28 22:24:02 wrappers.py:306 Reset delay of 1.0 seconds
+INFO 2026-05-28 22:24:07 l/process.py:61  Shutdown signal 2 received. Cleaning up…
+INFO 2026-05-28 22:24:07 rl/actor.py:285 [ACTOR] Shutting down act_with_policy
+INFO 2026-05-28 22:24:07 rl/actor.py:186 [ACTOR] Policy loop finished
+INFO 2026-05-28 22:24:07 rl/actor.py:191 [ACTOR] Closing queues
+INFO 2026-05-28 22:24:07 rl/actor.py:197 [ACTOR] Transitions process joined
+INFO 2026-05-28 22:24:07 rl/actor.py:199 [ACTOR] Interactions process joined
+INFO 2026-05-28 22:24:07 rl/actor.py:201 [ACTOR] Receive policy process joined
+INFO 2026-05-28 22:24:07 rl/actor.py:207 [ACTOR] Cleanup complete
+DEBUG 2026-05-28 22:24:07 re/_trace.py:47 close.started
+DEBUG 2026-05-28 22:24:07 re/_trace.py:47 close.complete

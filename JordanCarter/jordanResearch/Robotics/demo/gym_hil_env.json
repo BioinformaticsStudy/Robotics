@@ -1,0 +1,49 @@
+{
+    "env": {
+        "name": "gym_hil",
+        "task": "PandaPickCube-v0",
+        "fps": 10,
+        "robot": null,
+        "processor": {
+            "control_mode": "keyboard",
+            "observation": {
+                "add_joint_velocity_to_observation": true,
+                "display_cameras": false
+            },
+            "image_preprocessing": null,
+            "gripper": {
+                "use_gripper": true,
+                "gripper_penalty": -0.02
+            },
+            "reset": {
+                "fixed_reset_joint_positions": [
+                    0.0,
+                    0.195,
+                    0.0,
+                    -2.43,
+                    0.0,
+                    2.62,
+                    0.785
+                ],
+                "reset_time_s": 1.0,
+                "control_time_s": 15.0
+            }
+        },
+        "features_map": {
+            "observation.images.front": "observation.images.front",
+            "observation.images.wrist": "observation.images.wrist",
+            "observation.state": "observation.state",
+            "action": "action"
+        }
+    },
+    "dataset": {
+        "repo_id": "rl_sim_demo",
+        "root": "/Users/jordancarter/Desktop/Personal_Projects/Robotics/JordanCarter/jordanResearch/Robotics/env_demo_dataset",
+        "task": "PandaPickCube-v0",
+        "num_episodes_to_record": 75,
+        "replay_episode": 0,
+        "push_to_hub": false
+    },
+    "mode": "record",
+    "device": "cpu"
+}

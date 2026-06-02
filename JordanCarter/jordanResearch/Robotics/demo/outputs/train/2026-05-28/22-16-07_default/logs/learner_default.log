@@ -1,0 +1,357 @@
+INFO 2026-05-28 22:16:07 /learner.py:149 Learner logging initialized, writing to outputs/train/2026-05-28/22-16-07_default/logs/learner_default.log
+INFO 2026-05-28 22:16:07 /learner.py:150 {'batch_size': 32,
+ 'checkpoint_path': None,
+ 'cudnn_deterministic': False,
+ 'dataset': {'episodes': None,
+             'image_transforms': {'enable': False,
+                                  'max_num_transforms': 3,
+                                  'random_order': False,
+                                  'tfs': {'affine': {'kwargs': {'degrees': [-5.0,
+                                                                            5.0],
+                                                                'translate': [0.05,
+                                                                              0.05]},
+                                                     'type': 'RandomAffine',
+                                                     'weight': 1.0},
+                                          'brightness': {'kwargs': {'brightness': [0.8,
+                                                                                   1.2]},
+                                                         'type': 'ColorJitter',
+                                                         'weight': 1.0},
+                                          'contrast': {'kwargs': {'contrast': [0.8,
+                                                                               1.2]},
+                                                       'type': 'ColorJitter',
+                                                       'weight': 1.0},
+                                          'hue': {'kwargs': {'hue': [-0.05,
+                                                                     0.05]},
+                                                  'type': 'ColorJitter',
+                                                  'weight': 1.0},
+                                          'saturation': {'kwargs': {'saturation': [0.5,
+                                                                                   1.5]},
+                                                         'type': 'ColorJitter',
+                                                         'weight': 1.0},
+                                          'sharpness': {'kwargs': {'sharpness': [0.5,
+                                                                                 1.5]},
+                                                        'type': 'SharpnessJitter',
+                                                        'weight': 1.0}}},
+             'repo_id': 'rl_sim_policy_demo',
+             'revision': None,
+             'root': '/Users/jordancarter/Desktop/Personal_Projects/Robotics/JordanCarter/jordanResearch/Robotics/lerobot_policy_datasets',
+             'streaming': False,
+             'use_imagenet_stats': False,
+             'video_backend': 'torchcodec'},
+ 'env': {'disable_env_checker': True,
+         'features': {'action': {'shape': [3],
+                                 'type': <FeatureType.ACTION: 'ACTION'>},
+                      'observation.images.front': {'shape': [3, 128, 128],
+                                                   'type': <FeatureType.VISUAL: 'VISUAL'>},
+                      'observation.images.wrist': {'shape': [3, 128, 128],
+                                                   'type': <FeatureType.VISUAL: 'VISUAL'>},
+                      'observation.state': {'shape': [18],
+                                            'type': <FeatureType.STATE: 'STATE'>}},
+         'features_map': {'action': 'action',
+                          'observation.images.front': 'observation.images.front',
+                          'observation.images.wrist': 'observation.images.wrist',
+                          'observation.state': 'observation.state'},
+         'fps': 10,
+         'max_parallel_tasks': 1,
+         'name': 'gym_hil',
+         'processor': {'control_mode': 'leader',
+                       'gripper': {'gripper_penalty': -0.02,
+                                   'use_gripper': True},
+                       'image_preprocessing': None,
+                       'inverse_kinematics': None,
+                       'max_gripper_pos': 100.0,
+                       'observation': None,
+                       'reset': {'control_time_s': 15.0,
+                                 'fixed_reset_joint_positions': [0.0,
+                                                                 0.195,
+                                                                 0.0,
+                                                                 -2.43,
+                                                                 0.0,
+                                                                 2.62,
+                                                                 0.785],
+                                 'reset_time_s': 1.0,
+                                 'terminate_on_success': True},
+                       'reward_classifier': None},
+         'robot': None,
+         'task': 'PandaPickCube-v0',
+         'teleop': None,
+         'type': 'gym_manipulator'},
+ 'eval': {'batch_size': 7, 'n_episodes': 50, 'use_async_envs': True},
+ 'eval_freq': 20000,
+ 'job_name': 'default',
+ 'log_freq': 1,
+ 'num_workers': 2,
+ 'optimizer': {'grad_clip_norm': 10.0,
+               'lr': 0.001,
+               'optimizer_groups': {'actor': {'lr': 0.0003},
+                                    'critic': {'lr': 0.0003},
+                                    'temperature': {'lr': 0.0003}},
+               'type': 'multi_adam',
+               'weight_decay': 0.0},
+ 'output_dir': 'outputs/train/2026-05-28/22-16-07_default',
+ 'peft': None,
+ 'policy': {'actor_learner_config': {'learner_host': '127.0.0.1',
+                                     'learner_port': 50051,
+                                     'policy_parameters_push_frequency': 50,
+                                     'queue_get_timeout': 2},
+            'actor_lr': 0.0003,
+            'actor_network_kwargs': {'activate_final': True,
+                                     'hidden_dims': [256, 256]},
+            'async_prefetch': False,
+            'concurrency': {'actor': 'threads', 'learner': 'threads'},
+            'critic_lr': 0.0003,
+            'critic_network_kwargs': {'activate_final': True,
+                                      'final_activation': None,
+                                      'hidden_dims': [256, 256]},
+            'critic_target_update_weight': 0.005,
+            'dataset_stats': {'action': {'max': [1.0, 1.0, 1.0],
+                                         'min': [-1.0, -1.0, -1.0]},
+                              'observation.images.front': {'mean': [0.485,
+                                                                    0.456,
+                                                                    0.406],
+                                                           'std': [0.229,
+                                                                   0.224,
+                                                                   0.225]},
+                              'observation.images.wrist': {'mean': [0.485,
+                                                                    0.456,
+                                                                    0.406],
+                                                           'std': [0.229,
+                                                                   0.224,
+                                                                   0.225]},
+                              'observation.state': {'max': [0.1956124,
+                                                            0.5096723,
+                                                            0.05482981,
+                                                            -2.01792539,
+                                                            0.04425749,
+                                                            2.90565838,
+                                                            1.07170398,
+                                                            100.0,
+                                                            100.0,
+                                                            100.0,
+                                                            100.0,
+                                                            100.0,
+                                                            100.0,
+                                                            100.0,
+                                                            255.0,
+                                                            0.6,
+                                                            0.3,
+                                                            0.5],
+                                                    'min': [-0.18890867,
+                                                            -0.13319267,
+                                                            -0.15566483,
+                                                            -3.04198435,
+                                                            -0.05300621,
+                                                            2.52864378,
+                                                            0.426834,
+                                                            -100.0,
+                                                            -100.0,
+                                                            -100.0,
+                                                            -100.0,
+                                                            -100.0,
+                                                            -100.0,
+                                                            -100.0,
+                                                            0.0,
+                                                            0.2,
+                                                            -0.3,
+                                                            0.0]}},
+            'device': 'cpu',
+            'discount': 0.97,
+            'discrete_critic_network_kwargs': {'activate_final': True,
+                                               'final_activation': None,
+                                               'hidden_dims': [256, 256]},
+            'freeze_vision_encoder': True,
+            'grad_clip_norm': 10.0,
+            'image_embedding_pooling_dim': 8,
+            'image_encoder_hidden_dim': 32,
+            'input_features': {'observation.images.front': {'shape': [3,
+                                                                      128,
+                                                                      128],
+                                                            'type': <FeatureType.VISUAL: 'VISUAL'>},
+                               'observation.images.wrist': {'shape': [3,
+                                                                      128,
+                                                                      128],
+                                                            'type': <FeatureType.VISUAL: 'VISUAL'>},
+                               'observation.state': {'shape': [18],
+                                                     'type': <FeatureType.STATE: 'STATE'>}},
+            'latent_dim': 64,
+            'license': None,
+            'n_obs_steps': 1,
+            'normalization_mapping': {'ACTION': <NormalizationMode.MIN_MAX: 'MIN_MAX'>,
+                                      'ENV': <NormalizationMode.MIN_MAX: 'MIN_MAX'>,
+                                      'STATE': <NormalizationMode.MIN_MAX: 'MIN_MAX'>,
+                                      'VISUAL': <NormalizationMode.MEAN_STD: 'MEAN_STD'>},
+            'num_critics': 2,
+            'num_discrete_actions': 3,
+            'num_subsample_critics': None,
+            'offline_buffer_capacity': 100000,
+            'online_buffer_capacity': 100000,
+            'online_step_before_learning': 100,
+            'online_steps': 1000000,
+            'output_features': {'action': {'shape': [3],
+                                           'type': <FeatureType.ACTION: 'ACTION'>}},
+            'policy_kwargs': {'init_final': 0.05,
+                              'std_max': 5.0,
+                              'std_min': 1e-05,
+                              'use_tanh_squash': True},
+            'policy_update_freq': 1,
+            'pretrained_path': None,
+            'private': None,
+            'push_to_hub': False,
+            'repo_id': None,
+            'shared_encoder': True,
+            'state_encoder_hidden_dim': 256,
+            'storage_device': 'mps',
+            'tags': None,
+            'target_entropy': None,
+            'temperature_init': 0.01,
+            'temperature_lr': 0.0003,
+            'type': 'sac',
+            'use_amp': False,
+            'use_backup_entropy': True,
+            'use_peft': False,
+            'use_torch_compile': True,
+            'utd_ratio': 2,
+            'vision_encoder_name': 'lerobot/resnet10'},
+ 'rabc_epsilon': 1e-06,
+ 'rabc_head_mode': 'sparse',
+ 'rabc_kappa': 0.01,
+ 'rabc_progress_path': None,
+ 'rename_map': {},
+ 'resume': False,
+ 'save_checkpoint': True,
+ 'save_freq': 2000000,
+ 'scheduler': None,
+ 'seed': 1000,
+ 'steps': 5000,
+ 'tolerance_s': 0.0001,
+ 'use_policy_training_preset': True,
+ 'use_rabc': False,
+ 'wandb': {'add_tags': True,
+           'disable_artifact': True,
+           'enable': False,
+           'entity': None,
+           'mode': None,
+           'notes': None,
+           'project': 'franka_sim',
+           'run_id': None}}
+INFO 2026-05-28 22:16:07 /learner.py:159 [1m[33mLogs will be saved locally.[0m
+WARNING 2026-05-28 22:16:07 ice_utils.py:54 Using CPU, this will be slow.
+INFO 2026-05-28 22:16:07 /learner.py:309 Initializing policy
+WARNING 2026-05-28 22:16:07 /factory.py:498 You are instantiating a policy from scratch and its features are parsed from an environment rather than a dataset. Normalization modules inside the policy will have infinite values by default without stats from a dataset.
+INFO 2026-05-28 22:16:07 /learner.py:668 [LEARNER] gRPC server started
+DEBUG 2026-05-28 22:16:07 re/_trace.py:47 connect_tcp.started host='huggingface.co' port=443 local_address=None timeout=10 socket_options=None
+DEBUG 2026-05-28 22:16:07 re/_trace.py:47 connect_tcp.complete return_value=<httpcore._backends.sync.SyncStream object at 0x353808110>
+DEBUG 2026-05-28 22:16:07 re/_trace.py:47 start_tls.started ssl_context=<ssl.SSLContext object at 0x3538835d0> server_hostname='huggingface.co' timeout=10
+DEBUG 2026-05-28 22:16:07 re/_trace.py:47 start_tls.complete return_value=<httpcore._backends.sync.SyncStream object at 0x3538d7fe0>
+DEBUG 2026-05-28 22:16:07 re/_trace.py:47 send_request_headers.started request=<Request [b'HEAD']>
+DEBUG 2026-05-28 22:16:07 re/_trace.py:47 send_request_headers.complete
+DEBUG 2026-05-28 22:16:07 re/_trace.py:47 send_request_body.started request=<Request [b'HEAD']>
+DEBUG 2026-05-28 22:16:07 re/_trace.py:47 send_request_body.complete
+DEBUG 2026-05-28 22:16:07 re/_trace.py:47 receive_response_headers.started request=<Request [b'HEAD']>
+DEBUG 2026-05-28 22:16:07 re/_trace.py:47 receive_response_headers.complete return_value=(b'HTTP/1.1', 307, b'Temporary Redirect', [(b'Content-Type', b'text/plain; charset=utf-8'), (b'Content-Length', b'236'), (b'Connection', b'keep-alive'), (b'Date', b'Fri, 29 May 2026 03:16:08 GMT'), (b'Location', b'/api/resolve-cache/models/lerobot/resnet10/60e4365989619db6365ba92b1169d5dcc143d165/config.json?%2Flerobot%2Fresnet10%2Fresolve%2Fmain%2Fconfig.json=&etag=%22661ebcf4aec142f47be95003ad8784697d8d0af2%22'), (b'X-Powered-By', b'huggingface-moon'), (b'X-Request-Id', b'Root=1-6a1904f8-127723457df7e0f2769703e9;3c827eb0-e2df-4abd-a045-cd0d7d1501fd'), (b'RateLimit', b'"resolvers";r=2999;t=260'), (b'RateLimit-Policy', b'"fixed window";"resolvers";q=3000;w=300'), (b'cross-origin-opener-policy', b'same-origin'), (b'Referrer-Policy', b'strict-origin-when-cross-origin'), (b'Access-Control-Max-Age', b'86400'), (b'Access-Control-Allow-Origin', b'https://huggingface.co'), (b'Vary', b'Origin, Accept'), (b'Access-Control-Expose-Headers', b'X-Repo-Commit,X-Request-Id,X-Error-Code,X-Error-Message,X-Total-Count,ETag,Link,Accept-Ranges,Content-Range,X-Linked-Size,X-Linked-ETag,X-Xet-Hash'), (b'X-Repo-Commit', b'60e4365989619db6365ba92b1169d5dcc143d165'), (b'Accept-Ranges', b'bytes'), (b'X-Hub-Cache', b'MISS'), (b'Content-Disposition', b'inline; filename*=UTF-8\'\'config.json; filename="config.json";'), (b'Content-Security-Policy', b"default-src 'none'; sandbox"), (b'X-Linked-ETag', b'"661ebcf4aec142f47be95003ad8784697d8d0af2"'), (b'X-Cache', b'Miss from cloudfront'), (b'Via', b'1.1 15bbe97d5866b076d22279f42e40c7f0.cloudfront.net (CloudFront)'), (b'X-Amz-Cf-Pop', b'DFW59-P5'), (b'X-Amz-Cf-Id', b'zZTvVsx9cw_kbEjRpgMcvxRwHRoAti4dGlnclmMBtJLZEeCc7Avqcg==')])
+DEBUG 2026-05-28 22:16:07 re/_trace.py:47 receive_response_body.started request=<Request [b'HEAD']>
+DEBUG 2026-05-28 22:16:07 re/_trace.py:47 receive_response_body.complete
+DEBUG 2026-05-28 22:16:07 re/_trace.py:47 response_closed.started
+DEBUG 2026-05-28 22:16:07 re/_trace.py:47 response_closed.complete
+DEBUG 2026-05-28 22:16:07 re/_trace.py:47 send_request_headers.started request=<Request [b'HEAD']>
+DEBUG 2026-05-28 22:16:07 re/_trace.py:47 send_request_headers.complete
+DEBUG 2026-05-28 22:16:07 re/_trace.py:47 send_request_body.started request=<Request [b'HEAD']>
+DEBUG 2026-05-28 22:16:07 re/_trace.py:47 send_request_body.complete
+DEBUG 2026-05-28 22:16:07 re/_trace.py:47 receive_response_headers.started request=<Request [b'HEAD']>
+DEBUG 2026-05-28 22:16:08 re/_trace.py:47 receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Content-Type', b'text/plain; charset=utf-8'), (b'Content-Length', b'443'), (b'Connection', b'keep-alive'), (b'Date', b'Mon, 11 May 2026 10:35:04 GMT'), (b'ETag', b'"661ebcf4aec142f47be95003ad8784697d8d0af2"'), (b'X-Powered-By', b'huggingface-moon'), (b'X-Request-Id', b'Root=1-6a01b0d8-64f607bd6b98825c60c53bbe;c37fa827-1c81-4726-b652-f81e3c98ed09'), (b'RateLimit', b'"resolvers";r=2999;t=80'), (b'RateLimit-Policy', b'"fixed window";"resolvers";q=3000;w=300'), (b'cross-origin-opener-policy', b'same-origin'), (b'Referrer-Policy', b'strict-origin-when-cross-origin'), (b'Access-Control-Max-Age', b'86400'), (b'Access-Control-Allow-Origin', b'https://huggingface.co'), (b'Access-Control-Expose-Headers', b'X-Repo-Commit,X-Request-Id,X-Error-Code,X-Error-Message,X-Total-Count,ETag,Link,Accept-Ranges,Content-Range,X-Linked-Size,X-Linked-ETag,X-Xet-Hash'), (b'X-Repo-Commit', b'60e4365989619db6365ba92b1169d5dcc143d165'), (b'Accept-Ranges', b'bytes'), (b'Content-Disposition', b'inline; filename*=UTF-8\'\'config.json; filename="config.json";'), (b'Content-Security-Policy', b"default-src 'none'; sandbox"), (b'Vary', b'Origin'), (b'X-Cache', b'Hit from cloudfront'), (b'Via', b'1.1 15bbe97d5866b076d22279f42e40c7f0.cloudfront.net (CloudFront)'), (b'X-Amz-Cf-Pop', b'DFW59-P5'), (b'X-Amz-Cf-Id', b'5QoujTbS68TZL0EUwd1LuEBSWLXandmYxhWwVyMA47TLsWwPssZU7Q=='), (b'Age', b'1528864')])
+DEBUG 2026-05-28 22:16:08 re/_trace.py:47 receive_response_body.started request=<Request [b'HEAD']>
+DEBUG 2026-05-28 22:16:08 re/_trace.py:47 receive_response_body.complete
+DEBUG 2026-05-28 22:16:08 re/_trace.py:47 response_closed.started
+DEBUG 2026-05-28 22:16:08 re/_trace.py:47 response_closed.complete
+DEBUG 2026-05-28 22:16:08 re/_trace.py:47 send_request_headers.started request=<Request [b'HEAD']>
+DEBUG 2026-05-28 22:16:08 re/_trace.py:47 send_request_headers.complete
+DEBUG 2026-05-28 22:16:08 re/_trace.py:47 send_request_body.started request=<Request [b'HEAD']>
+DEBUG 2026-05-28 22:16:08 re/_trace.py:47 send_request_body.complete
+DEBUG 2026-05-28 22:16:08 re/_trace.py:47 receive_response_headers.started request=<Request [b'HEAD']>
+DEBUG 2026-05-28 22:16:08 re/_trace.py:47 receive_response_headers.complete return_value=(b'HTTP/1.1', 307, b'Temporary Redirect', [(b'Content-Type', b'text/plain; charset=utf-8'), (b'Content-Length', b'260'), (b'Connection', b'keep-alive'), (b'Date', b'Fri, 29 May 2026 03:16:08 GMT'), (b'Location', b'/api/resolve-cache/models/lerobot/resnet10/60e4365989619db6365ba92b1169d5dcc143d165/configuration_resnet.py?%2Flerobot%2Fresnet10%2Fresolve%2Fmain%2Fconfiguration_resnet.py=&etag=%224052d0071a8ee34021221da84f42607fb28dbbfb%22'), (b'X-Powered-By', b'huggingface-moon'), (b'X-Request-Id', b'Root=1-6a1904f8-24095fe72cb2c3654efdb070;0984c1ea-1541-400d-9e2a-c1fb6ff3588f'), (b'RateLimit', b'"resolvers";r=2998;t=260'), (b'RateLimit-Policy', b'"fixed window";"resolvers";q=3000;w=300'), (b'cross-origin-opener-policy', b'same-origin'), (b'Referrer-Policy', b'strict-origin-when-cross-origin'), (b'Access-Control-Max-Age', b'86400'), (b'Access-Control-Allow-Origin', b'https://huggingface.co'), (b'Vary', b'Origin, Accept'), (b'Access-Control-Expose-Headers', b'X-Repo-Commit,X-Request-Id,X-Error-Code,X-Error-Message,X-Total-Count,ETag,Link,Accept-Ranges,Content-Range,X-Linked-Size,X-Linked-ETag,X-Xet-Hash'), (b'X-Repo-Commit', b'60e4365989619db6365ba92b1169d5dcc143d165'), (b'Accept-Ranges', b'bytes'), (b'X-HF-Warning', b'unauthenticated; Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.'), (b'X-Hub-Cache', b'MISS'), (b'Content-Disposition', b'inline; filename*=UTF-8\'\'configuration_resnet.py; filename="configuration_resnet.py";'), (b'Content-Security-Policy', b"default-src 'none'; sandbox"), (b'X-Linked-ETag', b'"4052d0071a8ee34021221da84f42607fb28dbbfb"'), (b'X-Cache', b'Miss from cloudfront'), (b'Via', b'1.1 15bbe97d5866b076d22279f42e40c7f0.cloudfront.net (CloudFront)'), (b'X-Amz-Cf-Pop', b'DFW59-P5'), (b'X-Amz-Cf-Id', b'7QSugmlxm_KwXG8K4cPvfPQRKdZ1WaQCu6Ehle9dVvmYQcewNRQCqA==')])
+DEBUG 2026-05-28 22:16:08 re/_trace.py:47 receive_response_body.started request=<Request [b'HEAD']>
+DEBUG 2026-05-28 22:16:08 re/_trace.py:47 receive_response_body.complete
+DEBUG 2026-05-28 22:16:08 re/_trace.py:47 response_closed.started
+DEBUG 2026-05-28 22:16:08 re/_trace.py:47 response_closed.complete
+WARNING 2026-05-28 22:16:08 ls/_http.py:904 Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+DEBUG 2026-05-28 22:16:08 re/_trace.py:47 send_request_headers.started request=<Request [b'HEAD']>
+DEBUG 2026-05-28 22:16:08 re/_trace.py:47 send_request_headers.complete
+DEBUG 2026-05-28 22:16:08 re/_trace.py:47 send_request_body.started request=<Request [b'HEAD']>
+DEBUG 2026-05-28 22:16:08 re/_trace.py:47 send_request_body.complete
+DEBUG 2026-05-28 22:16:08 re/_trace.py:47 receive_response_headers.started request=<Request [b'HEAD']>
+DEBUG 2026-05-28 22:16:08 re/_trace.py:47 receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Content-Type', b'text/plain; charset=utf-8'), (b'Content-Length', b'3390'), (b'Connection', b'keep-alive'), (b'Date', b'Mon, 11 May 2026 10:35:09 GMT'), (b'ETag', b'"4052d0071a8ee34021221da84f42607fb28dbbfb"'), (b'X-Powered-By', b'huggingface-moon'), (b'X-Request-Id', b'Root=1-6a01b0dc-0311473b1d241324548083ca;c414bbb9-cabc-435d-8843-7cc3cfa49acd'), (b'RateLimit', b'"resolvers";r=2998;t=148'), (b'RateLimit-Policy', b'"fixed window";"resolvers";q=3000;w=300'), (b'cross-origin-opener-policy', b'same-origin'), (b'Referrer-Policy', b'strict-origin-when-cross-origin'), (b'Access-Control-Max-Age', b'86400'), (b'Access-Control-Allow-Origin', b'https://huggingface.co'), (b'Access-Control-Expose-Headers', b'X-Repo-Commit,X-Request-Id,X-Error-Code,X-Error-Message,X-Total-Count,ETag,Link,Accept-Ranges,Content-Range,X-Linked-Size,X-Linked-ETag,X-Xet-Hash'), (b'X-Repo-Commit', b'60e4365989619db6365ba92b1169d5dcc143d165'), (b'Accept-Ranges', b'bytes'), (b'Content-Disposition', b'inline; filename*=UTF-8\'\'configuration_resnet.py; filename="configuration_resnet.py";'), (b'Content-Security-Policy', b"default-src 'none'; sandbox"), (b'Vary', b'Origin'), (b'X-Cache', b'Hit from cloudfront'), (b'Via', b'1.1 15bbe97d5866b076d22279f42e40c7f0.cloudfront.net (CloudFront)'), (b'X-Amz-Cf-Pop', b'DFW59-P5'), (b'X-Amz-Cf-Id', b'_7LXqDVzr5NlpBN2KA-SQtMihZ2geWggE-RSKU1Rl2JLx0bUGp86gg=='), (b'Age', b'1528859')])
+DEBUG 2026-05-28 22:16:08 re/_trace.py:47 receive_response_body.started request=<Request [b'HEAD']>
+DEBUG 2026-05-28 22:16:08 re/_trace.py:47 receive_response_body.complete
+DEBUG 2026-05-28 22:16:08 re/_trace.py:47 response_closed.started
+DEBUG 2026-05-28 22:16:08 re/_trace.py:47 response_closed.complete
+DEBUG 2026-05-28 22:16:08 re/_trace.py:47 send_request_headers.started request=<Request [b'HEAD']>
+DEBUG 2026-05-28 22:16:08 re/_trace.py:47 send_request_headers.complete
+DEBUG 2026-05-28 22:16:08 re/_trace.py:47 send_request_body.started request=<Request [b'HEAD']>
+DEBUG 2026-05-28 22:16:08 re/_trace.py:47 send_request_body.complete
+DEBUG 2026-05-28 22:16:08 re/_trace.py:47 receive_response_headers.started request=<Request [b'HEAD']>
+DEBUG 2026-05-28 22:16:08 re/_trace.py:47 receive_response_headers.complete return_value=(b'HTTP/1.1', 307, b'Temporary Redirect', [(b'Content-Type', b'text/plain; charset=utf-8'), (b'Content-Length', b'250'), (b'Connection', b'keep-alive'), (b'Date', b'Fri, 29 May 2026 03:16:08 GMT'), (b'Location', b'/api/resolve-cache/models/lerobot/resnet10/60e4365989619db6365ba92b1169d5dcc143d165/modeling_resnet.py?%2Flerobot%2Fresnet10%2Fresolve%2Fmain%2Fmodeling_resnet.py=&etag=%221d1592a7790b6637fd430db5d5c78ade7849e10b%22'), (b'X-Powered-By', b'huggingface-moon'), (b'X-Request-Id', b'Root=1-6a1904f8-6142d7b506276f9419a3368c;e2825931-f15f-4771-84a3-d6b9056cc4ed'), (b'RateLimit', b'"resolvers";r=2997;t=260'), (b'RateLimit-Policy', b'"fixed window";"resolvers";q=3000;w=300'), (b'cross-origin-opener-policy', b'same-origin'), (b'Referrer-Policy', b'strict-origin-when-cross-origin'), (b'Access-Control-Max-Age', b'86400'), (b'Access-Control-Allow-Origin', b'https://huggingface.co'), (b'Vary', b'Origin, Accept'), (b'Access-Control-Expose-Headers', b'X-Repo-Commit,X-Request-Id,X-Error-Code,X-Error-Message,X-Total-Count,ETag,Link,Accept-Ranges,Content-Range,X-Linked-Size,X-Linked-ETag,X-Xet-Hash'), (b'X-Repo-Commit', b'60e4365989619db6365ba92b1169d5dcc143d165'), (b'Accept-Ranges', b'bytes'), (b'X-HF-Warning', b'unauthenticated; Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.'), (b'X-Hub-Cache', b'MISS'), (b'Content-Disposition', b'inline; filename*=UTF-8\'\'modeling_resnet.py; filename="modeling_resnet.py";'), (b'Content-Security-Policy', b"default-src 'none'; sandbox"), (b'X-Linked-ETag', b'"1d1592a7790b6637fd430db5d5c78ade7849e10b"'), (b'X-Cache', b'Miss from cloudfront'), (b'Via', b'1.1 15bbe97d5866b076d22279f42e40c7f0.cloudfront.net (CloudFront)'), (b'X-Amz-Cf-Pop', b'DFW59-P5'), (b'X-Amz-Cf-Id', b'CFCwfdNksb-47xgPSBYe-2yVnmLaMX02Xqqs9jpB9q6dy7qPThkFyQ==')])
+DEBUG 2026-05-28 22:16:08 re/_trace.py:47 receive_response_body.started request=<Request [b'HEAD']>
+DEBUG 2026-05-28 22:16:08 re/_trace.py:47 receive_response_body.complete
+DEBUG 2026-05-28 22:16:08 re/_trace.py:47 response_closed.started
+DEBUG 2026-05-28 22:16:08 re/_trace.py:47 response_closed.complete
+DEBUG 2026-05-28 22:16:08 re/_trace.py:47 send_request_headers.started request=<Request [b'HEAD']>
+DEBUG 2026-05-28 22:16:08 re/_trace.py:47 send_request_headers.complete
+DEBUG 2026-05-28 22:16:08 re/_trace.py:47 send_request_body.started request=<Request [b'HEAD']>
+DEBUG 2026-05-28 22:16:08 re/_trace.py:47 send_request_body.complete
+DEBUG 2026-05-28 22:16:08 re/_trace.py:47 receive_response_headers.started request=<Request [b'HEAD']>
+DEBUG 2026-05-28 22:16:08 re/_trace.py:47 receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Content-Type', b'text/plain; charset=utf-8'), (b'Content-Length', b'9888'), (b'Connection', b'keep-alive'), (b'Date', b'Mon, 11 May 2026 10:35:11 GMT'), (b'ETag', b'"1d1592a7790b6637fd430db5d5c78ade7849e10b"'), (b'X-Powered-By', b'huggingface-moon'), (b'X-Request-Id', b'Root=1-6a01b0df-42079a94698d18b4477e2629;501de55a-5933-46a0-8e15-388070d4f141'), (b'RateLimit', b'"resolvers";r=2999;t=289'), (b'RateLimit-Policy', b'"fixed window";"resolvers";q=3000;w=300'), (b'cross-origin-opener-policy', b'same-origin'), (b'Referrer-Policy', b'strict-origin-when-cross-origin'), (b'Access-Control-Max-Age', b'86400'), (b'Access-Control-Allow-Origin', b'https://huggingface.co'), (b'Access-Control-Expose-Headers', b'X-Repo-Commit,X-Request-Id,X-Error-Code,X-Error-Message,X-Total-Count,ETag,Link,Accept-Ranges,Content-Range,X-Linked-Size,X-Linked-ETag,X-Xet-Hash'), (b'X-Repo-Commit', b'60e4365989619db6365ba92b1169d5dcc143d165'), (b'Accept-Ranges', b'bytes'), (b'Content-Disposition', b'inline; filename*=UTF-8\'\'modeling_resnet.py; filename="modeling_resnet.py";'), (b'Content-Security-Policy', b"default-src 'none'; sandbox"), (b'Vary', b'Origin'), (b'X-Cache', b'Hit from cloudfront'), (b'Via', b'1.1 15bbe97d5866b076d22279f42e40c7f0.cloudfront.net (CloudFront)'), (b'X-Amz-Cf-Pop', b'DFW59-P5'), (b'X-Amz-Cf-Id', b'AlQUTp7TN16b2L88OGkz2iloCx7yNZMIDOwjq6_sbW4MhZFeV8dZzg=='), (b'Age', b'1528857')])
+DEBUG 2026-05-28 22:16:08 re/_trace.py:47 receive_response_body.started request=<Request [b'HEAD']>
+DEBUG 2026-05-28 22:16:08 re/_trace.py:47 receive_response_body.complete
+DEBUG 2026-05-28 22:16:08 re/_trace.py:47 response_closed.started
+DEBUG 2026-05-28 22:16:08 re/_trace.py:47 response_closed.complete
+INFO 2026-05-28 22:16:08 r_service.py:91 [LEARNER] Received request to receive transitions from the Actor
+INFO 2026-05-28 22:16:08 _service.py:105 [LEARNER] Received request to receive interactions from the Actor
+INFO 2026-05-28 22:16:08 ort/utils.py:77 [LEARNER] transitions Starting receiver
+INFO 2026-05-28 22:16:08 ort/utils.py:77 [LEARNER] interactions Starting receiver
+INFO 2026-05-28 22:16:08 r_service.py:56 [LEARNER] Received request to stream parameters from the Actor
+INFO 2026-05-28 22:16:08 r_service.py:68 [LEARNER] Push parameters to the Actor
+DEBUG 2026-05-28 22:16:08 learner.py:1097 [LEARNER] Pushing actor policy to the queue
+DEBUG 2026-05-28 22:16:08 learner.py:1107 [LEARNER] Including discrete critic in state dict push
+INFO 2026-05-28 22:16:08 /learner.py:927 [1m[33mOutput dir:[0m outputs/train/2026-05-28/22-16-07_default
+INFO 2026-05-28 22:16:08 /learner.py:928 cfg.env.task='PandaPickCube-v0'
+INFO 2026-05-28 22:16:08 /learner.py:929 cfg.policy.online_steps=1000000
+INFO 2026-05-28 22:16:08 /learner.py:930 num_learnable_params=1477841 (1M)
+INFO 2026-05-28 22:16:08 /learner.py:931 num_total_params=6383633 (6M)
+DEBUG 2026-05-28 22:16:09 ort/utils.py:53 [LEARNER] Sending parameters Buffer size 22.14576244354248 MB with
+DEBUG 2026-05-28 22:16:09 ort/utils.py:68 [LEARNER] Sending parameters Sent 2097152/23221515 bytes with state 1
+DEBUG 2026-05-28 22:16:09 ort/utils.py:68 [LEARNER] Sending parameters Sent 4194304/23221515 bytes with state 2
+DEBUG 2026-05-28 22:16:09 ort/utils.py:68 [LEARNER] Sending parameters Sent 6291456/23221515 bytes with state 2
+DEBUG 2026-05-28 22:16:09 ort/utils.py:68 [LEARNER] Sending parameters Sent 8388608/23221515 bytes with state 2
+DEBUG 2026-05-28 22:16:09 ort/utils.py:68 [LEARNER] Sending parameters Sent 10485760/23221515 bytes with state 2
+DEBUG 2026-05-28 22:16:09 ort/utils.py:68 [LEARNER] Sending parameters Sent 12582912/23221515 bytes with state 2
+DEBUG 2026-05-28 22:16:09 ort/utils.py:68 [LEARNER] Sending parameters Sent 14680064/23221515 bytes with state 2
+DEBUG 2026-05-28 22:16:09 ort/utils.py:68 [LEARNER] Sending parameters Sent 16777216/23221515 bytes with state 2
+DEBUG 2026-05-28 22:16:09 ort/utils.py:68 [LEARNER] Sending parameters Sent 18874368/23221515 bytes with state 2
+DEBUG 2026-05-28 22:16:09 ort/utils.py:68 [LEARNER] Sending parameters Sent 20971520/23221515 bytes with state 2
+DEBUG 2026-05-28 22:16:09 ort/utils.py:68 [LEARNER] Sending parameters Sent 23068672/23221515 bytes with state 2
+DEBUG 2026-05-28 22:16:09 ort/utils.py:68 [LEARNER] Sending parameters Sent 23221515/23221515 bytes with state 3
+DEBUG 2026-05-28 22:16:09 ort/utils.py:70 [LEARNER] Sending parameters Published 22.14576244354248 MB
+INFO 2026-05-28 22:16:09 r_service.py:84 [LEARNER] Parameters sent
+INFO 2026-05-28 22:16:09 /learner.py:994 make_dataset offline buffer
+DEBUG 2026-05-28 22:16:09 re/_trace.py:47 send_request_headers.started request=<Request [b'GET']>
+DEBUG 2026-05-28 22:16:09 re/_trace.py:47 send_request_headers.complete
+DEBUG 2026-05-28 22:16:09 re/_trace.py:47 send_request_body.started request=<Request [b'GET']>
+DEBUG 2026-05-28 22:16:09 re/_trace.py:47 send_request_body.complete
+DEBUG 2026-05-28 22:16:09 re/_trace.py:47 receive_response_headers.started request=<Request [b'GET']>
+DEBUG 2026-05-28 22:16:09 re/_trace.py:47 receive_response_headers.complete return_value=(b'HTTP/1.1', 401, b'Unauthorized', [(b'Content-Type', b'application/json; charset=utf-8'), (b'Content-Length', b'41'), (b'Connection', b'keep-alive'), (b'Date', b'Fri, 29 May 2026 03:16:09 GMT'), (b'ETag', b'W/"29-dEMcHWfJi78ZR1aqzb1ELAhp3Us"'), (b'X-Powered-By', b'huggingface-moon'), (b'X-Request-Id', b'Root=1-6a1904f9-2e4672b74ed36e356c2cc214;7b172f6a-b0d9-41eb-803a-366bd0fbeae5'), (b'RateLimit', b'"api";r=499;t=259'), (b'RateLimit-Policy', b'"fixed window";"api";q=500;w=300'), (b'cross-origin-opener-policy', b'same-origin'), (b'Referrer-Policy', b'strict-origin-when-cross-origin'), (b'Access-Control-Max-Age', b'86400'), (b'Access-Control-Allow-Origin', b'https://huggingface.co'), (b'Vary', b'Origin'), (b'Access-Control-Expose-Headers', b'X-Repo-Commit,X-Request-Id,X-Error-Code,X-Error-Message,X-Total-Count,ETag,Link,Accept-Ranges,Content-Range,X-Linked-Size,X-Linked-ETag,X-Xet-Hash'), (b'X-Error-Message', b'Invalid username or password.'), (b'WWW-Authenticate', b'Bearer realm="Authentication required", charset="UTF-8"'), (b'X-Cache', b'Error from cloudfront'), (b'Via', b'1.1 15bbe97d5866b076d22279f42e40c7f0.cloudfront.net (CloudFront)'), (b'X-Amz-Cf-Pop', b'DFW59-P5'), (b'X-Amz-Cf-Id', b'-KcMWkY3DVy92iqPFPTYXcNtSZP75r7ywgfUmqkGIYWYH6DCujMLPw==')])
+DEBUG 2026-05-28 22:16:09 re/_trace.py:47 receive_response_body.started request=<Request [b'GET']>
+DEBUG 2026-05-28 22:16:09 re/_trace.py:47 receive_response_body.complete
+DEBUG 2026-05-28 22:16:09 re/_trace.py:47 response_closed.started
+DEBUG 2026-05-28 22:16:09 re/_trace.py:47 response_closed.complete
+ERROR 2026-05-28 22:16:09 /learner.py:232 [LEARNER] Unhandled exception in training loop
+INFO 2026-05-28 22:16:09 /learner.py:671 [LEARNER] Stopping gRPC server...
+INFO 2026-05-28 22:16:09 r_service.py:86 [LEARNER] Stream parameters finished
+INFO 2026-05-28 22:16:09 /learner.py:673 [LEARNER] gRPC server stopped
+INFO 2026-05-28 22:16:09 /learner.py:235 [LEARNER] Closing queues
+INFO 2026-05-28 22:16:09 /learner.py:241 [LEARNER] Communication process joined
+INFO 2026-05-28 22:16:09 /learner.py:247 [LEARNER] Cleanup complete
+INFO 2026-05-28 22:16:09 /learner.py:118 [LEARNER] train_cli finished
+INFO 2026-05-28 22:16:09 learner.py:1202 [LEARNER] main finished
+DEBUG 2026-05-28 22:16:19 _service.py:114 [LEARNER] Finished receiving interactions
+DEBUG 2026-05-28 22:16:19 re/_trace.py:47 close.started
+DEBUG 2026-05-28 22:16:19 re/_trace.py:47 close.complete
